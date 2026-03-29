@@ -1,2 +1,0 @@
-# guardata-site
-guardata-site
