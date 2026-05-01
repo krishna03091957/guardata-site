@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FK3BDMJCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9FK3BDMJCV');
+</script>
+<title>DPDP for SaaS & B2B Software: Data Processor Compliance Guide [2026]</title>
+<link rel="canonical" href="https://guardata.in/blog/dpdp-saas-b2b/">
+<meta name="description" content="DPDP compliance for SaaS and B2B software companies in India. Data Processor obligations, customer data, sub-processors, cross-border transfers — complete guide.">
+<meta name="keywords" content="DPDP for SaaS India, B2B software DPDP compliance, SaaS data processor India, DPDP data processing agreement, cloud software DPDP">
+<meta property="og:title" content="DPDP for SaaS & B2B Software: Data Processor Compliance Guide">
+<meta property="og:description" content="SaaS companies face dual DPDP obligations — as Data Fiduciaries for their own users AND as Data Processors for client data. Complete compliance guide.">
+<meta property="og:url" content="https://guardata.in/blog/dpdp-saas-b2b/">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DPDP for SaaS & B2B Software: Data Processor Compliance Guide [2026]",
+  "description": "Complete DPDP compliance guide for SaaS and B2B software companies including dual Data Fiduciary/Processor roles, DPAs, sub-processors, cross-border data transfers, and customer data obligations.",
+  "author": {"@type": "Organization", "name": "Guardata", "url": "https://guardata.in"},
+  "publisher": {"@type": "Organization", "name": "Guardata", "logo": {"@type": "ImageObject", "url": "https://guardata.in/assets/images/logo.png"}},
+  "datePublished": "2026-03-03",
+  "dateModified": "2026-03-03",
+  "mainEntityOfPage": "https://guardata.in/blog/dpdp-saas-b2b/",
+  "wordCount": 3400,
+  "articleSection": "DPDP Compliance",
+  "inLanguage": "en-IN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a SaaS company a Data Fiduciary or Data Processor under DPDP?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Usually both. A SaaS company is a Data Fiduciary for data it collects directly from its own users (accounts, usage analytics, billing). It is a Data Processor when it processes personal data on behalf of its business customers — for example, a CRM storing a client company's customer records."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do SaaS companies need Data Processing Agreements with customers?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. When a SaaS company processes personal data on behalf of a business customer (Data Fiduciary), a Data Processing Agreement (DPA) is required under DPDP. The DPA defines what data is processed, for what purpose, security requirements, and deletion obligations."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does DPDP apply to Indian SaaS companies serving international customers?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, for any personal data of Indian citizens processed. If your international customers have Indian end-users whose data flows through your platform, DPDP applies to that data processing regardless of where your servers are located."}
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://guardata.in"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://guardata.in/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "DPDP for SaaS & B2B", "item": "https://guardata.in/blog/dpdp-saas-b2b/"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#00B4D8;--acc-dk:#0099BB;--acc-lt:#E8F6FB;
+  --orange:#FF6B35;--orange-dk:#D9541E;
+  --navy:#0F4C81;--navy-dk:#081E3A;
+  --text:#0C1A2E;--muted:#4E6B8C;--muted-lt:#8AABC8;
+  --border:#EAF0F6;--border-md:#C8D8E8;
+  --bg:#F4F8FC;--white:#FFFFFF;--nav-h:54px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;font-size:15px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0%;z-index:1000}
+.topnav{position:sticky;top:0;z-index:100;background:#0F4C81;height:var(--nav-h);display:flex;align-items:center;padding:0 40px;gap:10px}
+.nav-logo{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:800;color:white;text-decoration:none;letter-spacing:-0.04em;flex-shrink:0}
+.nav-div{height:14px;width:1px;background:rgba(255,255,255,0.18)}
+.nav-trail{display:flex;align-items:center;gap:6px;flex:1;overflow:hidden;min-width:0}
+.nav-trail a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;white-space:nowrap}
+.nav-trail a:hover{color:rgba(255,255,255,0.9)}
+.nav-trail .sep{color:rgba(255,255,255,0.2);font-size:11px}
+.nav-trail .now{font-size:13px;color:rgba(255,255,255,0.7);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-cta{margin-left:auto;flex-shrink:0;font-size:13px;font-weight:700;color:white;background:var(--orange);padding:7px 16px;border-radius:7px;text-decoration:none}
+.nav-cta:hover{background:var(--orange-dk)}
+.article-hero{background:#0F4C81;padding:40px 0 36px;position:relative;overflow:hidden}
+.article-hero::before{content:'';position:absolute;top:-70px;right:-50px;width:320px;height:320px;border-radius:50%;background:rgba(0,180,216,0.18)}
+.article-hero::after{content:'';position:absolute;bottom:-80px;left:12%;width:220px;height:220px;border-radius:50%;background:rgba(255,107,53,0.1)}
+.hero-curve{height:28px;background:#0F4C81;position:relative}
+.hero-curve::after{content:'';position:absolute;bottom:0;left:0;right:0;height:28px;background:var(--white);border-radius:24px 24px 0 0}
+.hero-inner{max-width:1140px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
+.cat-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(0,180,216,0.2);color:#7FD8EC;font-size:11px;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:4px 10px;border-radius:5px;margin-bottom:12px;border:1px solid rgba(0,180,216,0.3)}
+h1{font-family:'DM Sans',sans-serif;font-size:38px;font-weight:700;line-height:1.18;color:white;letter-spacing:-0.02em;margin-bottom:14px;max-width:760px}
+.meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.meta-row span{font-size:13px;color:rgba(255,255,255,0.55)}
+.meta-row .dot{width:3px;height:3px;background:rgba(255,255,255,0.25);border-radius:50%}
+.meta-pill{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:2px 9px;border-radius:20px;font-size:12px;color:rgba(255,255,255,0.6)}
+.layout{display:grid;grid-template-columns:1fr 210px;max-width:1140px;margin:0 auto;padding:0 40px;align-items:start}
+.main-article{padding:24px 48px 80px 0;min-width:0}
+.in-short{background:var(--acc-lt);border:1px solid rgba(0,180,216,0.2);border-left:4px solid var(--acc);padding:14px 16px;border-radius:0 7px 7px 0;margin-bottom:20px}
+.in-short-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--acc);margin-bottom:6px}
+.in-short p{font-size:14px;margin:0;line-height:1.6}
+.in-short p+p{margin-top:6px}
+h2{font-family:'DM Sans',sans-serif;font-size:19px;font-weight:800;color:var(--navy);margin:24px 0 8px;letter-spacing:-0.02em}
+h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin:14px 0 5px}
+p{margin-bottom:10px;line-height:1.65}
+strong{font-weight:700}
+em{color:var(--muted)}
+ul,ol{margin:8px 0;padding-left:20px}
+li{margin:4px 0;line-height:1.6}
+hr{border:none;height:1px;background:var(--border);margin:20px 0}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+.callout{padding:10px 14px;margin:10px 0;border-radius:0 7px 7px 0;font-size:14px}
+.callout-india{background:var(--acc-lt);border-left:3px solid var(--acc)}
+.callout-warning{background:#FFFBEB;border-left:3px solid #D97706}
+.callout-green{background:#F0FDF4;border-left:3px solid #10B981}
+.callout p{margin:0;line-height:1.55}
+.callout p+p{margin-top:6px}
+.role-box{background:var(--bg);border:2px solid var(--border-md);border-radius:8px;padding:16px 18px;margin:12px 0}
+.role-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.role-box h3{margin:0 0 8px;color:var(--navy)}
+.role-box ul{margin:8px 0 0}
+.role-box p{margin-bottom:6px}
+.req-box{background:var(--bg);border:2px solid var(--border-md);border-radius:8px;padding:16px 18px;margin:12px 0}
+.req-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.req-box h3{margin:0 0 8px;color:var(--navy)}
+.req-box p{margin-bottom:6px}
+.req-box ul{margin:8px 0 0}
+.violation-box{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:16px 18px;margin:16px 0}
+.violation-label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px}
+.violation-box p{margin:0;line-height:1.6}
+.violation-box p+p{margin-top:8px}
+.table-wrap{overflow-x:auto;margin:12px 0;border-radius:8px;border:1px solid var(--border-md);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:9px 14px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--navy);background:var(--bg);border-bottom:2px solid var(--border-md)}
+td{padding:10px 14px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--bg)}
+.related-box{margin:20px 0}
+.related-box h3{font-family:'DM Sans',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.7px;color:var(--muted-lt);margin-bottom:8px;font-weight:700}
+.related-link{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border:1px solid var(--border-md);border-radius:7px;margin-bottom:5px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;transition:all 0.15s}
+.related-link:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+.related-link::after{content:'→';color:var(--muted-lt)}
+.author-box{display:flex;gap:12px;padding:16px;background:var(--bg);border-radius:10px;margin:20px 0}
+.author-av{width:38px;height:38px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:15px;flex-shrink:0;font-family:'DM Sans',sans-serif}
+.author-info h4{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;margin-bottom:2px}
+.author-info p{font-size:12px;color:var(--muted-lt);margin-bottom:6px}
+.author-links{display:flex;gap:5px;flex-wrap:wrap}
+.author-link{font-size:11px;color:var(--muted);text-decoration:none;padding:2px 7px;border:1px solid var(--border-md);border-radius:4px}
+.author-link:hover{color:var(--acc);text-decoration:none}
+.faq-item{padding:12px 0;border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-family:'DM Sans',sans-serif;font-size:14px;margin:0 0 5px;font-weight:700}
+.faq-item p{margin:0;font-size:14px;color:var(--muted)}
+.sidebar{padding:24px 0 60px;position:sticky;top:calc(var(--nav-h) + 10px);max-height:calc(100vh - var(--nav-h) - 20px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:0}
+.toc-title{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted-lt);margin-bottom:8px;padding-left:10px}
+.toc-list{list-style:none;padding:0;margin-bottom:16px}
+.toc-list li a{display:block;padding:5px 10px;font-size:13px;color:var(--muted);text-decoration:none;border-radius:5px;line-height:1.35;border-left:2px solid transparent;transition:all 0.12s}
+.toc-list li a:hover{color:var(--text);background:var(--bg);text-decoration:none}
+.toc-list li a.active{color:var(--acc);border-left-color:var(--acc);background:var(--acc-lt);font-weight:600}
+.sidebar-div{height:1px;background:var(--border);margin:0 0 14px}
+.sidebar-cta{background:var(--navy);border-radius:8px;padding:14px;text-align:center}
+.sidebar-cta h4{font-family:'DM Sans',sans-serif;color:white;font-size:13px;font-weight:700;margin-bottom:4px}
+.sidebar-cta p{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px}
+.sidebar-cta a{display:block;background:var(--orange);color:white;padding:8px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:700;font-family:'DM Sans',sans-serif}
+.sidebar-cta a:hover{background:var(--orange-dk);text-decoration:none}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;padding:0 16px}
+  .main-article{padding:20px 0 60px}
+  .sidebar{display:none}
+  h1{font-size:26px}
+  h2{font-size:17px}
+  .topnav{padding:0 16px}
+  .nav-trail .now{display:none}
+  .hero-inner{padding:0 16px}
+  .hero-curve{display:none}
+}
+@media(max-width:480px){h1{font-size:22px}.nav-cta{font-size:12px;padding:6px 12px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav class="topnav">
+  <a href="https://guardata.in" class="nav-logo">Guardata</a>
+  <div class="nav-div"></div>
+  <div class="nav-trail">
+    <a href="https://guardata.in/blog">Blog</a>
+    <span class="sep">›</span>
+    <span class="now">DPDP for SaaS &amp; B2B Software</span>
+  </div>
+  <a href="https://app.guardata.in/" class="nav-cta">The Compliance Hub →</a>
+</nav>
+
+<div class="article-hero">
+  <div class="hero-inner">
+    <span class="cat-tag">SaaS &amp; B2B</span>
+    <h1>DPDP for SaaS &amp; B2B Software: Data Processor Compliance Guide</h1>
+    <div class="meta-row">
+      <span>April 27, 2026</span><span class="dot"></span>
+      <span class="meta-pill">⏱ 11 min read</span><span class="dot"></span>
+      <span>Guardata Team</span>
+    </div>
+  </div>
+</div>
+<div class="hero-curve"></div>
+
+<div class="layout">
+  <article class="main-article">
+
+    <div class="in-short" style="margin-top:24px">
+      <div class="in-short-label">FOR SAAS FOUNDERS</div>
+      <p><strong>SaaS companies face a unique DPDP challenge: you wear two hats simultaneously.</strong> You are a Data Fiduciary for data you collect from your own users — and a Data Processor for your customers' end-user data that lives in your platform. Both roles carry independent obligations. Getting this wrong exposes you and your customers to penalties.</p>
+      <p><strong>Unique SaaS issues:</strong> Dual Fiduciary/Processor role • Data Processing Agreements with every customer • Sub-processor chains • Cross-border data transfers • Multi-tenant data isolation • SaaS-specific breach notification complexity.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="dual-role">The Dual Role: Fiduciary AND Processor</h2>
+
+    <p>This is the defining DPDP complexity for SaaS companies. Unlike a retail business that is simply a Data Fiduciary for its customers, a SaaS company simultaneously holds two distinct legal roles depending on whose data is involved.</p>
+
+    <div class="role-box">
+      <div class="role-label">ROLE 1: DATA FIDUCIARY</div>
+      <h3>Your Own Platform Data</h3>
+      <p>You are the Data Fiduciary for personal data you collect directly in the course of running your business:</p>
+      <ul>
+        <li>User accounts (names, emails, phone numbers of people who sign up)</li>
+        <li>Billing and payment information</li>
+        <li>Usage analytics and behaviour tracking (page views, feature usage)</li>
+        <li>Support ticket history</li>
+        <li>Marketing email lists</li>
+        <li>Trial and free tier user data</li>
+      </ul>
+      <p><strong>Your obligations:</strong> Privacy policy, consent, security, deletion on request — full DPDP compliance as a Fiduciary.</p>
+    </div>
+
+    <div class="role-box">
+      <div class="role-label">ROLE 2: DATA PROCESSOR</div>
+      <h3>Your Customers' End-User Data</h3>
+      <p>You are the Data Processor when your platform stores or processes personal data that <em>your business customers</em> collected from <em>their</em> users:</p>
+      <ul>
+        <li>A CRM SaaS storing a company's customer contact database</li>
+        <li>An HRMS SaaS storing a company's employee records</li>
+        <li>A marketing SaaS storing a company's email subscriber list</li>
+        <li>A helpdesk SaaS storing a company's customer support tickets</li>
+        <li>An accounting SaaS storing a company's vendor and client financial data</li>
+      </ul>
+      <p><strong>Your obligations:</strong> Process data only as instructed by the customer, implement security, delete data when instructed, assist with breach notifications, sign Data Processing Agreements.</p>
+    </div>
+
+    <div class="callout callout-india">
+      <p><strong>⚙️ Why This Matters:</strong> Your business customer (the Data Fiduciary) is responsible to their users for compliance. But if YOU (the Data Processor) have a breach or mishandle data, the Data Fiduciary gets fined. They will immediately look to you for contractual liability. Without a DPA, you have no protection.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="fiduciary">When You're the Data Fiduciary: Platform Data Obligations</h2>
+
+    <div class="req-box">
+      <div class="req-label">FIDUCIARY REQUIREMENT 1</div>
+      <h3>Privacy Policy for Platform Users</h3>
+      <ul>
+        <li>Cover what you collect at signup (name, email, phone, company)</li>
+        <li>Explain usage analytics and what tracking you use (Mixpanel, Amplitude, GA)</li>
+        <li>State your retention policy for free/trial accounts (e.g., "deleted 30 days after trial expires")</li>
+        <li>Explain data shared with sub-processors (AWS, Stripe, Intercom, etc.)</li>
+        <li>Describe cross-border transfers if your servers are outside India</li>
+      </ul>
+    </div>
+
+    <div class="req-box">
+      <div class="req-label">FIDUCIARY REQUIREMENT 2</div>
+      <h3>Consent at Signup</h3>
+      <ul>
+        <li>Clear, unchecked consent checkbox: "I agree to the Privacy Policy and Terms"</li>
+        <li>Separate opt-in for marketing emails (not bundled into signup consent)</li>
+        <li>Trial users have the same rights as paying customers — same consent requirements</li>
+      </ul>
+    </div>
+
+    <div class="req-box">
+      <div class="req-label">FIDUCIARY REQUIREMENT 3</div>
+      <h3>User Account Deletion</h3>
+      <ul>
+        <li>Provide self-service account deletion — users must be able to delete their own accounts</li>
+        <li>Deletion must cascade: delete from live database, backups (within reasonable timeframe), analytics, email lists</li>
+        <li>Retain only what's legally required (billing records for tax purposes)</li>
+        <li>Respond to deletion requests within 30 days</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="processor">When You're the Data Processor: Customer Data Obligations</h2>
+
+    <div class="req-box">
+      <div class="req-label">PROCESSOR REQUIREMENT 1</div>
+      <h3>Process Only as Instructed</h3>
+      <p>As a Data Processor, you must process customer data <strong>only for the purposes your customer (Fiduciary) has instructed</strong>. This means:</p>
+      <ul>
+        <li>Do NOT use customer data to train your own AI models without explicit consent</li>
+        <li>Do NOT mine customer data for competitive intelligence</li>
+        <li>Do NOT use customer data for advertising targeting</li>
+        <li>Do NOT share customer data with other customers (multi-tenancy isolation)</li>
+        <li>Process data only within the scope defined in your DPA</li>
+      </ul>
+    </div>
+
+    <div class="req-box">
+      <div class="req-label">PROCESSOR REQUIREMENT 2</div>
+      <h3>Security Standards</h3>
+      <p>As a Processor you must implement security at least as strong as the Fiduciary requires:</p>
+      <ul>
+        <li>Encryption at rest (AES-256) and in transit (TLS 1.2+)</li>
+        <li>Access controls (employees can only access data needed for their role)</li>
+        <li>Penetration testing (at least annually)</li>
+        <li>SOC 2 Type II certification (strong signal of compliance — increasingly required by enterprise customers)</li>
+        <li>Documented incident response process</li>
+      </ul>
+    </div>
+
+    <div class="req-box">
+      <div class="req-label">PROCESSOR REQUIREMENT 3</div>
+      <h3>Breach Notification to Customer</h3>
+      <p>If you (the Processor) suffer a breach affecting customer data:</p>
+      <ul>
+        <li>Notify the customer (Fiduciary) <strong>immediately</strong> — they need to notify the DPB within 72 hours</li>
+        <li>Provide full breach details: what data, how many records, cause, remediation steps</li>
+        <li>Your DPA should specify notification timelines (typically 24-48 hours to customer)</li>
+        <li>Do NOT attempt to notify the DPB directly on behalf of the Fiduciary — that's their obligation</li>
+      </ul>
+    </div>
+
+    <div class="req-box">
+      <div class="req-label">PROCESSOR REQUIREMENT 4</div>
+      <h3>Data Deletion at Contract End</h3>
+      <ul>
+        <li>When a customer terminates their subscription: delete all their data within the timeframe specified in your DPA (typically 30–90 days)</li>
+        <li>Provide data export before deletion (standard practice)</li>
+        <li>Certify deletion in writing to the customer</li>
+        <li>Deletion must include backups — specify backup deletion timeline in your DPA</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="dpa">Data Processing Agreements: What Every SaaS Needs</h2>
+
+    <p>A <strong>Data Processing Agreement (DPA)</strong> is a contract between the Data Fiduciary (your customer) and you (the Data Processor) that defines the terms of data processing. Under DPDP, DPAs are essential for every B2B SaaS relationship involving personal data.</p>
+
+    <h3>What Your DPA Must Cover</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>DPA Section</th>
+            <th>What to Specify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Scope of processing</strong></td><td>Exactly what data you process, for what purpose, on whose behalf</td></tr>
+          <tr><td><strong>Security measures</strong></td><td>Encryption standards, access controls, audit logging, penetration testing frequency</td></tr>
+          <tr><td><strong>Sub-processors</strong></td><td>List of all sub-processors (AWS, Stripe, etc.) and customer approval process for new ones</td></tr>
+          <tr><td><strong>Data location</strong></td><td>Where data is stored (country/region), cross-border transfer safeguards</td></tr>
+          <tr><td><strong>Breach notification</strong></td><td>Timeline to notify customer (e.g., within 24 hours of discovery)</td></tr>
+          <tr><td><strong>Audit rights</strong></td><td>Customer's right to audit your security practices (or receive audit reports)</td></tr>
+          <tr><td><strong>Deletion on termination</strong></td><td>Timeline and process for deleting customer data after contract ends</td></tr>
+          <tr><td><strong>Liability</strong></td><td>Your liability if a breach occurs due to your failure</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-india">
+      <p><strong>⚙️ Competitive Advantage:</strong> Having a well-drafted DPA ready accelerates enterprise sales. Enterprise procurement teams and CISOs ask for DPAs before signing contracts. Having it ready signals maturity and removes a common deal-blocking step.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="subprocessors">Sub-Processors: Your Responsibility Chain</h2>
+
+    <p>Every SaaS product uses third-party services — AWS for hosting, Stripe for payments, Intercom for support, Mixpanel for analytics. Each of these is a <strong>sub-processor</strong> for your customers' data. You are responsible for their compliance.</p>
+
+    <h3>Common SaaS Sub-Processors and DPDP Implications</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sub-Processor</th>
+            <th>Data They Process</th>
+            <th>Your Obligation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>AWS / GCP / Azure</td><td>All customer data (at rest)</td><td>Ensure data residency in India if required; sign their DPA</td></tr>
+          <tr><td>Stripe / Razorpay</td><td>Billing and payment data</td><td>Their DPA covers payment processing; disclose in your sub-processor list</td></tr>
+          <tr><td>Intercom / Freshdesk</td><td>Customer support tickets</td><td>Customer support data may include end-user personal data — sign their DPA</td></tr>
+          <tr><td>Mixpanel / Amplitude</td><td>User behaviour analytics</td><td>Analytics tools process user data — disclose, sign DPA, check their data residency</td></tr>
+          <tr><td>SendGrid / Mailchimp</td><td>Email addresses, communication logs</td><td>Email tools process personal data — sign their DPA, disclose as sub-processor</td></tr>
+          <tr><td>OpenAI / Anthropic</td><td>Any data sent for AI processing</td><td>If you send customer data to AI APIs, explicit customer consent required</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-warning">
+      <p><strong>⚠️ AI Sub-Processor Alert:</strong> If you use OpenAI, Anthropic, or any AI API to process your customers' end-user data (e.g., AI-powered summaries, auto-fill, content generation using customer data), this is a sub-processing relationship. You MUST disclose this in your DPA and get customer consent. Many enterprise customers will explicitly prohibit their data from being sent to AI APIs.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="crossborder">Cross-Border Data Transfers</h2>
+
+    <p>Most Indian SaaS companies use US or Singapore-based cloud providers. This creates cross-border data transfer obligations under DPDP.</p>
+
+    <h3>What DPDP Requires for Cross-Border Transfers</h3>
+
+    <ul>
+      <li>The Central Government will notify a list of approved countries for cross-border transfers</li>
+      <li>Until that list is published, Standard Contractual Clauses (SCCs) are the safest approach</li>
+      <li>Your privacy policy must disclose that data may be transferred outside India</li>
+      <li>Your DPA must specify data location and transfer safeguards</li>
+    </ul>
+
+    <h3>Practical Steps Now</h3>
+
+    <ul>
+      <li>Document where all customer data is stored (which AWS/GCP region)</li>
+      <li>If you can offer India data residency (e.g., AWS Mumbai region) — offer it for enterprise customers</li>
+      <li>Include data transfer provisions in your DPA and privacy policy</li>
+      <li>Monitor the Government's cross-border transfer approved country list when published</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="multitenant">Multi-Tenant Security: Data Isolation Requirements</h2>
+
+    <p>Multi-tenant architecture means multiple customers' data lives on the same infrastructure. DPDP's security requirements make isolation critical:</p>
+
+    <ul>
+      <li><strong>Logical isolation:</strong> One customer must never be able to access another's data — even accidentally</li>
+      <li><strong>Database level:</strong> Row-level security, separate schemas, or separate databases per tenant</li>
+      <li><strong>API level:</strong> Every API call must validate the requesting tenant before returning data</li>
+      <li><strong>Log isolation:</strong> Audit logs must be tenant-scoped — customer should only see their own activity</li>
+      <li><strong>Backup isolation:</strong> If restoring one customer's backup, others must not be affected</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <p><strong>⚠️ Data Bleed Risk:</strong> A bug that exposes one customer's data to another is a DPDP breach — affecting potentially many Data Fiduciaries simultaneously. Each affected customer must be notified and must notify the DPB. A single multi-tenancy bug can trigger cascading compliance obligations across your entire customer base.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="violations">Top SaaS DPDP Violations</h2>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 1: Training AI on Customer Data Without Consent (₹50–250 Crore)</div>
+      <p><strong>The mistake:</strong> SaaS company uses customer data — emails, documents, support tickets stored in the platform — to train or fine-tune their own AI model. No customer consent obtained.</p>
+      <p><strong>Why illegal:</strong> You are a Data Processor. Processing data beyond the instructed purpose (storage/retrieval) without consent is a violation.</p>
+      <p><strong>Fix:</strong> Explicitly ask customers in your DPA and settings whether they consent to AI training use. Default must be OFF. Honour opt-outs completely.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 2: No DPA with Business Customers (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> SaaS company has hundreds of business customers whose employee and end-user data lives in the platform. No DPA exists — just Terms of Service.</p>
+      <p><strong>Why illegal:</strong> Processing personal data on behalf of a Data Fiduciary without a DPA violates DPDP's contractual requirements for Data Processors.</p>
+      <p><strong>Fix:</strong> Add a DPA to your subscription flow. Existing customers need to sign it before May 2027.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 3: Multi-Tenancy Data Bleed (₹250 Crore)</div>
+      <p><strong>The mistake:</strong> A bug in the SaaS platform exposes Customer A's data to Customer B. The company notices but delays notifying affected customers for a week to fix it quietly first.</p>
+      <p><strong>Why illegal:</strong> Security failure + failure to notify within 72 hours. Each affected customer (Data Fiduciary) has their own DPB notification obligation triggered.</p>
+      <p><strong>Fix:</strong> Notify affected customers within 24 hours (per DPA). Customers then notify DPB. Document the incident and remediation fully.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 4: Not Deleting Data After Customer Churns (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> Customer cancels their SaaS subscription. Company keeps all their data indefinitely "in case they come back" — including thousands of the customer's end-user records.</p>
+      <p><strong>Why illegal:</strong> Once the processing purpose ends (subscription ends), the legal basis for holding data ends too.</p>
+      <p><strong>Fix:</strong> Offer data export for 30 days after cancellation. Delete all data within 60–90 days of contract end. Certify deletion in writing.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 5: Undisclosed Sub-Processors (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> SaaS company switches from AWS to GCP without notifying customers. Or adds a new analytics tool that processes customer data. DPA says "approved sub-processors" but list is never updated.</p>
+      <p><strong>Why illegal:</strong> Customers (as Data Fiduciaries) are responsible for all processing, including by your sub-processors. Undisclosed sub-processors mean they can't fulfil their own DPDP obligations.</p>
+      <p><strong>Fix:</strong> Maintain a current sub-processor list at a public URL. Notify customers 30 days before adding new sub-processors. Give them the right to object.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="checklist">SaaS DPDP Compliance Checklist</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Compliance Item</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Privacy policy for platform users</strong> (signup, trial, paid)</td><td>☐</td></tr>
+          <tr><td><strong>Consent at signup</strong> (unchecked, separate marketing opt-in)</td><td>☐</td></tr>
+          <tr><td><strong>Self-service account deletion</strong> for users</td><td>☐</td></tr>
+          <tr><td><strong>DPA template ready</strong> for business customers</td><td>☐</td></tr>
+          <tr><td><strong>DPA covers all required clauses</strong> (scope, security, sub-processors, breach, deletion)</td><td>☐</td></tr>
+          <tr><td><strong>Sub-processor list published</strong> (public URL, kept updated)</td><td>☐</td></tr>
+          <tr><td><strong>Sub-processor DPAs signed</strong> (AWS, Stripe, analytics tools, etc.)</td><td>☐</td></tr>
+          <tr><td><strong>AI training opt-in/opt-out</strong> (default OFF for customer data)</td><td>☐</td></tr>
+          <tr><td><strong>Multi-tenant isolation tested</strong> (no cross-customer data bleed)</td><td>☐</td></tr>
+          <tr><td><strong>Encryption at rest and in transit</strong></td><td>☐</td></tr>
+          <tr><td><strong>Customer data deletion on churn</strong> (process + timeline defined)</td><td>☐</td></tr>
+          <tr><td><strong>Breach notification process</strong> (notify customers within 24 hours)</td><td>☐</td></tr>
+          <tr><td><strong>Cross-border transfer disclosures</strong> (in privacy policy and DPA)</td><td>☐</td></tr>
+          <tr><td><strong>Data residency option</strong> (India region available for enterprise customers)</td><td>☐</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <h2 id="faq">FAQ for SaaS Founders</h2>
+
+    <div class="faq-item">
+      <h3>Is a SaaS company a Data Fiduciary or Data Processor under DPDP?</h3>
+      <p><strong>Usually both simultaneously.</strong> Fiduciary for your own users' data (accounts, billing). Processor for your business customers' end-user data stored in your platform.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do SaaS companies need DPAs with customers?</h3>
+      <p><strong>Yes.</strong> Whenever you process personal data on behalf of a business customer, a DPA is required. Terms of Service alone are not sufficient.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use customer data to train my AI?</h3>
+      <p><strong>Only with explicit opt-in consent.</strong> Default must be OFF. Customers who opt out must be fully excluded. This must be specified in your DPA and settings.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does DPDP apply to Indian SaaS serving international customers?</h3>
+      <p><strong>Yes,</strong> for any personal data of Indian citizens processed — even if your international customers are based abroad but have Indian end-users.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What happens to customer data when they cancel?</h3>
+      <p>You must delete all their data within the timeframe specified in your DPA (typically 30–90 days). Provide data export first. Certify deletion in writing. Include backup deletion in the timeline.</p>
+    </div>
+
+    <hr>
+
+    <div class="related-box">
+      <h3>Related Articles</h3>
+      <a href="https://guardata.in/blog/dpdp-for-startups/" class="related-link">DPDP for Startups: Founder's Guide</a>
+      <a href="https://guardata.in/blog/what-is-dpdp-act/" class="related-link">What is the DPDP Act? Explained</a>
+      <a href="https://guardata.in/dpdp-act-india/" class="related-link">DPDP Act India: Complete Guide</a>
+    </div>
+
+    <div class="author-box">
+      <div class="author-av">G</div>
+      <div class="author-info">
+        <h4>Written by Guardata Team</h4>
+        <p>Helping businesses achieve DPDP compliance.</p>
+        <div class="author-links">
+          <a href="mailto:founder@guardata.in" class="author-link">Email</a>
+          <a href="https://www.youtube.com/@Guardata" class="author-link">YouTube</a>
+          <a href="https://x.com/Guardata_in" class="author-link">X</a>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="toc-title">On this page</div>
+    <ul class="toc-list">
+      <li><a href="#dual-role" class="active">Dual Role: Fiduciary &amp; Processor</a></li>
+      <li><a href="#fiduciary">When You're the Fiduciary</a></li>
+      <li><a href="#processor">When You're the Processor</a></li>
+      <li><a href="#dpa">Data Processing Agreements</a></li>
+      <li><a href="#subprocessors">Sub-Processors</a></li>
+      <li><a href="#crossborder">Cross-Border Transfers</a></li>
+      <li><a href="#multitenant">Multi-Tenant Security</a></li>
+      <li><a href="#violations">Top Violations</a></li>
+      <li><a href="#checklist">Compliance Checklist</a></li>
+      <li><a href="#faq">FAQ for SaaS Founders</a></li>
+    </ul>
+    <div class="sidebar-div"></div>
+    <div class="sidebar-cta">
+      <h4>Free Compliance Toolkit</h4>
+      <p>Audit readiness.</p>
+      <a href="https://guardata.in/tools">Get Started →</a>
+    </div>
+  </aside>
+</div>
+
+<script>
+const bar=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const d=document.documentElement;bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'});
+const links=document.querySelectorAll('.toc-list a');
+[...links].map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean).forEach(s=>{
+  new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const lnk=document.querySelector(`.toc-list a[href="#${e.target.id}"]`);if(lnk)lnk.classList.add('active')}})},{rootMargin:'-15% 0px -75% 0px'}).observe(s)
+});
+</script>
+</body>
+</html>
