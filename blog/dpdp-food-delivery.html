@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FK3BDMJCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9FK3BDMJCV');
+</script>
+<title>DPDP for Food Delivery: Swiggy, Zomato & Cloud Kitchen Compliance Guide [2026]</title>
+<link rel="canonical" href="https://guardata.in/blog/dpdp-food-delivery/">
+<meta name="description" content="DPDP compliance for Swiggy and Zomato restaurant partners, cloud kitchens, and ONDC sellers in India. Customer location data, food preferences, and delivery data protection guide.">
+<meta name="keywords" content="Swiggy Zomato DPDP compliance, food delivery data protection India, cloud kitchen DPDP, restaurant data privacy India, ONDC seller compliance">
+<meta property="og:title" content="DPDP for Food Delivery: Swiggy, Zomato & Cloud Kitchen Guide">
+<meta property="og:description" content="Restaurant partners on Swiggy, Zomato, and ONDC have independent DPDP obligations. Complete compliance guide for food businesses.">
+<meta property="og:url" content="https://guardata.in/blog/dpdp-food-delivery/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Guardata_in">
+<meta name="twitter:title" content="DPDP for Food Delivery: Swiggy, Zomato & Cloud Kitchens">
+<meta name="twitter:description" content="Restaurant partners and cloud kitchens have independent DPDP compliance obligations. Learn what you're responsible for.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DPDP for Food Delivery: Swiggy, Zomato & Cloud Kitchen Compliance Guide [2026]",
+  "description": "Complete DPDP compliance guide for food delivery restaurant partners, cloud kitchens, and ONDC sellers. Covers customer location data, food preferences, delivery addresses, and platform vs partner responsibilities.",
+  "author": {"@type": "Organization", "name": "Guardata", "url": "https://guardata.in"},
+  "publisher": {"@type": "Organization", "name": "Guardata", "logo": {"@type": "ImageObject", "url": "https://guardata.in/assets/images/logo.png"}},
+  "datePublished": "2026-03-03",
+  "dateModified": "2026-03-03",
+  "mainEntityOfPage": "https://guardata.in/blog/dpdp-food-delivery/",
+  "wordCount": 3300,
+  "articleSection": "DPDP Compliance",
+  "inLanguage": "en-IN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does DPDP apply to Swiggy and Zomato restaurant partners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Restaurant partners on Swiggy, Zomato, and other food delivery platforms access customer names, phone numbers, delivery addresses, and order history. This makes them independent Data Fiduciaries under DPDP — separate from the platform's own compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is customer location data personal data under DPDP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Delivery addresses and GPS location data are personal data under DPDP. Restaurant partners who access this data for order fulfillment must handle it securely, use it only for delivery, and delete it after the retention period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use customer order history for my own marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the customer explicitly consented to marketing when they placed the order — and most customers on Swiggy/Zomato consent only to order fulfillment, not to restaurant marketing. Using order data from platform orders for your own WhatsApp/SMS campaigns is a DPDP violation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DPDP apply to cloud kitchens with no dine-in customers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cloud kitchens receive customer data (name, phone, delivery address) through platform orders. Even though they never meet customers face-to-face, they are processing personal data and must comply with DPDP."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://guardata.in"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://guardata.in/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "DPDP for Food Delivery", "item": "https://guardata.in/blog/dpdp-food-delivery/"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#00B4D8;--acc-dk:#0099BB;--acc-lt:#E8F6FB;
+  --orange:#FF6B35;--orange-dk:#D9541E;
+  --navy:#0F4C81;--navy-dk:#081E3A;
+  --text:#0C1A2E;--muted:#4E6B8C;--muted-lt:#8AABC8;
+  --border:#EAF0F6;--border-md:#C8D8E8;
+  --bg:#F4F8FC;--white:#FFFFFF;--nav-h:54px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;font-size:15px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0%;z-index:1000}
+.topnav{position:sticky;top:0;z-index:100;background:#0F4C81;height:var(--nav-h);display:flex;align-items:center;padding:0 40px;gap:10px}
+.nav-logo{font-size:16px;font-weight:800;color:white;text-decoration:none;letter-spacing:-0.04em;flex-shrink:0}
+.nav-div{height:14px;width:1px;background:rgba(255,255,255,0.18)}
+.nav-trail{display:flex;align-items:center;gap:6px;flex:1;overflow:hidden;min-width:0}
+.nav-trail a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;white-space:nowrap}
+.nav-trail a:hover{color:rgba(255,255,255,0.9)}
+.nav-trail .sep{color:rgba(255,255,255,0.2);font-size:11px}
+.nav-trail .now{font-size:13px;color:rgba(255,255,255,0.7);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-cta{font-family:'DM Sans',sans-serif;margin-left:auto;flex-shrink:0;font-size:13px;font-weight:700;color:white;background:var(--orange);padding:7px 16px;border-radius:7px;text-decoration:none}
+.nav-cta:hover{background:var(--orange-dk)}
+.article-hero{background:#0F4C81;padding:40px 0 36px;position:relative;overflow:hidden}
+.article-hero::before{content:'';position:absolute;top:-70px;right:-50px;width:320px;height:320px;border-radius:50%;background:rgba(0,180,216,0.18)}
+.article-hero::after{content:'';position:absolute;bottom:-80px;left:12%;width:220px;height:220px;border-radius:50%;background:rgba(255,107,53,0.1)}
+.hero-curve{height:28px;background:#0F4C81;position:relative}
+.hero-curve::after{content:'';position:absolute;bottom:0;left:0;right:0;height:28px;background:var(--white);border-radius:24px 24px 0 0}
+.hero-inner{max-width:1140px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
+.cat-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(0,180,216,0.2);color:#7FD8EC;font-size:11px;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:4px 10px;border-radius:5px;margin-bottom:12px;border:1px solid rgba(0,180,216,0.3)}
+h1{font-family:'DM Sans',sans-serif;font-size:38px;font-weight:700;line-height:1.18;color:white;letter-spacing:-0.02em;margin-bottom:14px;max-width:760px}
+.meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.meta-row span{font-size:13px;color:rgba(255,255,255,0.55)}
+.meta-row .dot{width:3px;height:3px;background:rgba(255,255,255,0.25);border-radius:50%}
+.meta-pill{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:2px 9px;border-radius:20px;font-size:12px;color:rgba(255,255,255,0.6)}
+.layout{display:grid;grid-template-columns:1fr 210px;max-width:1140px;margin:0 auto;padding:0 40px;align-items:start}
+.main-article{padding:24px 48px 80px 0;min-width:0}
+.in-short{background:var(--acc-lt);border:1px solid rgba(0,180,216,0.2);border-left:4px solid var(--acc);padding:14px 16px;border-radius:0 7px 7px 0;margin-bottom:20px}
+.in-short-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--acc);margin-bottom:6px}
+.in-short p{font-size:14px;margin:0;line-height:1.6}
+.in-short p+p{margin-top:6px}
+h2{font-family:'DM Sans',sans-serif;font-size:19px;font-weight:800;color:var(--navy);margin:24px 0 8px;letter-spacing:-0.02em}
+h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin:14px 0 5px}
+p{margin-bottom:10px;line-height:1.65}
+strong{font-weight:700}
+em{color:var(--muted)}
+ul,ol{margin:8px 0;padding-left:20px}
+li{margin:4px 0;line-height:1.6}
+hr{border:none;height:1px;background:var(--border);margin:20px 0}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+.callout{padding:10px 14px;margin:10px 0;border-radius:0 7px 7px 0;font-size:14px}
+.callout-india{background:var(--acc-lt);border-left:3px solid var(--acc)}
+.callout-warning{background:#FFFBEB;border-left:3px solid #D97706}
+.callout-green{background:#F0FDF4;border-left:3px solid #10B981}
+.callout p{margin:0;line-height:1.55}
+.callout p+p{margin-top:6px}
+.data-box{background:var(--bg);border:2px solid var(--border-md);border-radius:8px;padding:16px 18px;margin:12px 0}
+.data-box h3{font-family:'DM Sans',sans-serif;margin:0 0 8px;color:var(--navy)}
+.data-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.data-box ul{margin:8px 0 0}
+.platform-section{background:var(--bg);border:2px solid var(--border-md);border-radius:8px;padding:16px 18px;margin:12px 0}
+.platform-name{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.platform-section h3{font-family:'DM Sans',sans-serif;margin:0 0 8px;color:var(--navy)}
+.platform-section p{margin-bottom:6px}
+.platform-section ul{margin:8px 0 0}
+.violation-box{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:16px 18px;margin:16px 0}
+.violation-label{font-size:11px;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px}
+.violation-box p{margin:0;line-height:1.6}
+.violation-box p+p{margin-top:8px}
+.table-wrap{overflow-x:auto;margin:12px 0;border-radius:8px;border:1px solid var(--border-md);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:9px 14px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--navy);background:var(--bg);border-bottom:2px solid var(--border-md)}
+td{padding:10px 14px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--bg)}
+.related-box{margin:20px 0}
+.related-box h3{font-family:'DM Sans',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.7px;color:var(--muted-lt);margin-bottom:8px;font-weight:700}
+.related-link{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border:1px solid var(--border-md);border-radius:7px;margin-bottom:5px;text-decoration:none;color:var(--text);font-size:13px;font-weight:500;transition:all 0.15s}
+.related-link:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+.related-link::after{content:'→';color:var(--muted-lt)}
+.author-box{display:flex;gap:12px;padding:16px;background:var(--bg);border-radius:10px;margin:20px 0}
+.author-av{width:38px;height:38px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:15px;flex-shrink:0}
+.author-info h4{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;margin-bottom:2px}
+.author-info p{font-size:12px;color:var(--muted-lt);margin-bottom:6px}
+.author-links{display:flex;gap:5px;flex-wrap:wrap}
+.author-link{font-size:11px;color:var(--muted);text-decoration:none;padding:2px 7px;border:1px solid var(--border-md);border-radius:4px}
+.author-link:hover{color:var(--acc);text-decoration:none}
+.faq-item{padding:12px 0;border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-family:'DM Sans',sans-serif;font-size:14px;margin:0 0 5px;font-weight:700}
+.faq-item p{margin:0;font-size:14px;color:var(--muted)}
+.sidebar{padding:24px 0 60px;position:sticky;top:calc(var(--nav-h) + 10px);max-height:calc(100vh - var(--nav-h) - 20px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:0}
+.toc-title{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted-lt);margin-bottom:8px;padding-left:10px}
+.toc-list{list-style:none;padding:0;margin-bottom:16px}
+.toc-list li a{display:block;padding:5px 10px;font-size:13px;color:var(--muted);text-decoration:none;border-radius:5px;line-height:1.35;border-left:2px solid transparent;transition:all 0.12s}
+.toc-list li a:hover{color:var(--text);background:var(--bg);text-decoration:none}
+.toc-list li a.active{color:var(--acc);border-left-color:var(--acc);background:var(--acc-lt);font-weight:600}
+.sidebar-div{height:1px;background:var(--border);margin:0 0 14px}
+.sidebar-cta{background:var(--navy);border-radius:8px;padding:14px;text-align:center}
+.sidebar-cta h4{font-family:'DM Sans',sans-serif;color:white;font-size:13px;font-weight:700;margin-bottom:4px}
+.sidebar-cta p{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px}
+.sidebar-cta a{font-family:'DM Sans',sans-serif;display:block;background:var(--orange);color:white;padding:8px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:700}
+.sidebar-cta a:hover{background:var(--orange-dk);text-decoration:none}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;padding:0 16px}
+  .main-article{padding:20px 0 60px}
+  .sidebar{display:none}
+  h1{font-size:26px}
+  h2{font-family:'DM Sans',sans-serif;font-size:17px}
+  .topnav{padding:0 16px}
+  .nav-trail .now{display:none}
+  .hero-inner{padding:0 16px}
+  .hero-curve{display:none}
+}
+@media(max-width:480px){h1{font-size:22px}.nav-cta{font-family:'DM Sans',sans-serif;font-size:12px;padding:6px 12px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav class="topnav">
+  <a href="https://guardata.in" class="nav-logo">Guardata</a>
+  <div class="nav-div"></div>
+  <div class="nav-trail">
+    <a href="https://guardata.in/blog">Blog</a>
+    <span class="sep">›</span>
+    <span class="now">DPDP for Food Delivery</span>
+  </div>
+  <a href="https://app.guardata.in/" class="nav-cta">The Compliance Hub →</a>
+</nav>
+
+<div class="article-hero">
+  <div class="hero-inner">
+    <span class="cat-tag">Food Delivery</span>
+    <h1>DPDP for Food Delivery: Swiggy, Zomato &amp; Cloud Kitchen Compliance Guide</h1>
+    <div class="meta-row">
+      <span>April 26, 2026</span><span class="dot"></span>
+      <span class="meta-pill">⏱ 11 min read</span><span class="dot"></span>
+      <span>Guardata Team</span>
+    </div>
+  </div>
+</div>
+<div class="hero-curve"></div>
+
+<div class="layout">
+  <article class="main-article">
+
+    <div class="in-short" style="margin-top:24px">
+      <div class="in-short-label">FOR RESTAURANT PARTNERS</div>
+      <p><strong>Swiggy and Zomato do NOT handle DPDP compliance for you.</strong> Every restaurant partner, cloud kitchen, and ONDC seller that receives customer orders — names, phone numbers, delivery addresses, food preferences — is independently processing personal data under DPDP and must comply.</p>
+      <p><strong>Applies to:</strong> Swiggy partners • Zomato partners • ONDC sellers • Cloud kitchens • Tiffin services • Home cooks on food platforms • Direct-order restaurants using WhatsApp/phone.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="applies">Does DPDP Apply to Food Businesses?</h2>
+
+    <p>If your food business does any of the following, DPDP applies:</p>
+
+    <ul>
+      <li>✅ Receives orders through Swiggy, Zomato, or ONDC (customer name, phone, address visible)</li>
+      <li>✅ Takes direct orders via phone, WhatsApp, or your own website</li>
+      <li>✅ Has a loyalty programme or customer accounts</li>
+      <li>✅ Maintains a customer database for repeat orders</li>
+      <li>✅ Sends promotional messages via SMS, WhatsApp, or email</li>
+      <li>✅ Uses delivery tracking (GPS data of customers)</li>
+      <li>✅ Stores food preferences or dietary requirements</li>
+      <li>✅ Takes online payments (Razorpay, Paytm, UPI)</li>
+    </ul>
+
+    <div class="callout callout-india">
+      <p><strong>🍔 Surprising Reality:</strong> Even a home cook selling tiffins to 10 customers via WhatsApp is processing personal data under DPDP. The moment you store a customer's name, phone number, and address — you're a Data Fiduciary. No size exemption exists.</p>
+    </div>
+
+    <p>Over <strong>500,000 restaurant partners</strong> are listed on Swiggy and Zomato combined. Add ONDC sellers, standalone delivery restaurants, cloud kitchens, tiffin services, and home bakers — the total number of food businesses processing personal data in India runs into the millions. Almost none have any DPDP compliance in place.</p>
+
+    <hr>
+
+    <h2 id="data">What Customer Data Do Food Businesses Process?</h2>
+
+    <div class="data-box">
+      <div class="data-label">ORDER DATA (EVERY ORDER)</div>
+      <h3>What You See for Every Delivery Order</h3>
+      <ul>
+        <li>Customer full name</li>
+        <li>Delivery address (building, street, area, PIN code, landmark)</li>
+        <li>Phone number (for delivery coordination)</li>
+        <li>Order details (what they ordered, customisations, instructions)</li>
+        <li>Payment status</li>
+        <li>Order time and date</li>
+      </ul>
+    </div>
+
+    <div class="data-box">
+      <div class="data-label">BEHAVIOURAL &amp; PREFERENCE DATA</div>
+      <h3>Data You Accumulate Over Time</h3>
+      <ul>
+        <li>Order history (what they order, how often, average spend)</li>
+        <li>Food preferences (cuisines, dishes, spice levels)</li>
+        <li>Dietary requirements (vegetarian, vegan, Jain, halal, allergies)</li>
+        <li>Favourite delivery times and locations</li>
+        <li>Customer reviews and ratings</li>
+      </ul>
+    </div>
+
+    <div class="data-box">
+      <div class="data-label">DIRECT ORDER DATA (IF APPLICABLE)</div>
+      <h3>If You Take Orders via WhatsApp, Phone, or Website</h3>
+      <ul>
+        <li>WhatsApp chat history with customer orders</li>
+        <li>Saved phone contacts of regular customers</li>
+        <li>Payment details (UPI IDs, bank transfer records)</li>
+        <li>Address book of delivery locations</li>
+        <li>Custom order notes and special requests</li>
+      </ul>
+    </div>
+
+    <div class="callout callout-warning">
+      <p><strong>⚠️ Location Data Is Personal Data:</strong> Customer delivery addresses are personal data under DPDP. GPS coordinates, saved "home" and "work" locations — all personal data. You must handle, secure, and delete this data like any other personal information.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="platform-vs-you">Platform vs Partner: Who Is Responsible for What?</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>DPDP Requirement</th>
+            <th>Platform (Swiggy/Zomato)</th>
+            <th>You (Restaurant Partner)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Platform privacy policy</strong></td>
+            <td>✅ Handled by platform</td>
+            <td>⚠️ You need your OWN policy for direct orders and data you store</td>
+          </tr>
+          <tr>
+            <td><strong>Customer consent for platform orders</strong></td>
+            <td>✅ Platform gets consent</td>
+            <td>⚠️ Platform consent ≠ consent for YOUR marketing use</td>
+          </tr>
+          <tr>
+            <td><strong>Security of data on platform</strong></td>
+            <td>✅ Platform secures their servers</td>
+            <td>❌ YOU secure any data exported or stored locally</td>
+          </tr>
+          <tr>
+            <td><strong>Retention of order data</strong></td>
+            <td>✅ Platform manages their database</td>
+            <td>❌ YOU delete any downloaded or locally stored order data</td>
+          </tr>
+          <tr>
+            <td><strong>Direct order data (WhatsApp/phone)</strong></td>
+            <td>Not applicable</td>
+            <td>❌ Entirely your responsibility</td>
+          </tr>
+          <tr>
+            <td><strong>Customer database / loyalty programme</strong></td>
+            <td>Not applicable</td>
+            <td>❌ Entirely your responsibility</td>
+          </tr>
+          <tr>
+            <td><strong>WhatsApp/SMS marketing</strong></td>
+            <td>Not applicable</td>
+            <td>❌ Entirely your responsibility (need explicit consent)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-warning">
+      <p><strong>🔴 The Key Trap:</strong> When a customer orders from you on Zomato, they consent to <em>Zomato's</em> privacy policy — not yours. If you download that customer's data and use it for your own WhatsApp marketing campaign, you're using data without valid consent. That's a ₹50 crore violation.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="swiggy-zomato">Swiggy &amp; Zomato Partner Compliance</h2>
+
+    <h3>What Swiggy/Zomato Handle for You</h3>
+    <ul>
+      <li>Customer consent for platform-mediated orders</li>
+      <li>Platform-level security and data encryption</li>
+      <li>Payment processing and PCI compliance</li>
+      <li>Platform privacy policy for customer-platform relationship</li>
+    </ul>
+
+    <h3>What YOU Must Handle as a Restaurant Partner</h3>
+
+    <div class="platform-section">
+      <div class="platform-name">SWIGGY / ZOMATO PARTNER REQUIREMENTS — MARKETING</div>
+      <h3>1. Do NOT export customer data for marketing</h3>
+      <p>Swiggy and Zomato give you access to customer order data through their partner dashboards. This data is shared for <strong>order fulfillment only</strong>.</p>
+      <ul>
+        <li>❌ Do NOT download customer phone numbers and add to your WhatsApp broadcast list</li>
+        <li>❌ Do NOT export order reports and run SMS marketing campaigns</li>
+        <li>❌ Do NOT build a customer database from platform order data for direct marketing</li>
+        <li>✅ DO use order data only for preparing and delivering the order</li>
+      </ul>
+    </div>
+
+    <div class="platform-section">
+      <div class="platform-name">SWIGGY / ZOMATO PARTNER REQUIREMENTS — SECURITY</div>
+      <h3>2. Secure Your Partner Dashboard Access</h3>
+      <p>Your Swiggy/Zomato partner dashboard contains customer data. Secure it:</p>
+      <ul>
+        <li>Use a strong, unique password for your partner account</li>
+        <li>Enable 2-factor authentication if available</li>
+        <li>Do not share your login credentials with delivery partners or third parties</li>
+        <li>Log out of partner dashboard on shared devices</li>
+      </ul>
+    </div>
+
+    <div class="platform-section">
+      <div class="platform-name">SWIGGY / ZOMATO PARTNER REQUIREMENTS — ORDER PRINTOUTS</div>
+      <h3>3. Handle Order Printouts Carefully</h3>
+      <p>Many restaurants print order slips containing customer name, phone number, and delivery address.</p>
+      <ul>
+        <li>Shred/destroy printed order slips after delivery is completed</li>
+        <li>Do not leave order printouts lying around the kitchen where non-staff can see them</li>
+        <li>Destroy batch printouts at end of day — do not accumulate weeks of customer data on paper</li>
+      </ul>
+    </div>
+
+    <div class="platform-section">
+      <div class="platform-name">SWIGGY / ZOMATO PARTNER REQUIREMENTS — REVIEWS</div>
+      <h3>4. Customer Reviews and Feedback</h3>
+      <p>When customers leave reviews on Swiggy/Zomato, they include their name and feedback. If you respond to reviews:</p>
+      <ul>
+        <li>Do not use information from reviews to contact customers outside the platform</li>
+        <li>Do not share customer review content publicly without consent</li>
+        <li>Platform review data is for service improvement only</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="cloud-kitchen">Cloud Kitchen Compliance</h2>
+
+    <p>Cloud kitchens (delivery-only kitchens with no dine-in) have a unique DPDP profile. They process <em>more</em> customer data than traditional restaurants in some ways, because:</p>
+
+    <ul>
+      <li>100% of orders are delivery orders — every order contains customer address</li>
+      <li>Often run multiple brands from one kitchen — collecting data across multiple brand identities</li>
+      <li>Frequently use order management software that stores customer history</li>
+      <li>Many use customer data for re-ordering and loyalty purposes</li>
+    </ul>
+
+    <div class="platform-section">
+      <div class="platform-name">CLOUD KITCHEN REQUIREMENTS — MULTI-BRAND</div>
+      <h3>Multi-Brand Data Separation</h3>
+      <p>If you operate multiple food brands from one cloud kitchen (e.g., "Bombay Biryani" and "South Indian Express" both running from the same kitchen), each brand's customer data must be handled separately.</p>
+      <ul>
+        <li>Don't share customer data between your own brands without consent</li>
+        <li>A customer who ordered from "Bombay Biryani" has NOT consented to receive marketing from "South Indian Express"</li>
+        <li>Keep brand databases separate</li>
+      </ul>
+    </div>
+
+    <div class="platform-section">
+      <div class="platform-name">CLOUD KITCHEN REQUIREMENTS — ORDER MANAGEMENT SOFTWARE</div>
+      <h3>Order Management Software</h3>
+      <p>Most cloud kitchens use order management systems (Petpooja, Posist, UrbanPiper, etc.) that store customer data. Under DPDP:</p>
+      <ul>
+        <li>These software providers are your Data Processors</li>
+        <li>Ensure they have Data Processing Agreements (DPAs)</li>
+        <li>Verify they are DPDP-compliant</li>
+        <li>Set data retention rules in your OMS to auto-delete old customer data</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="direct-orders">Direct Orders: WhatsApp, Phone, and Own Website</h2>
+
+    <p>Many food businesses take orders directly via WhatsApp, phone calls, or their own website alongside (or instead of) platform listings. These are <strong>fully your responsibility</strong> — no platform compliance to rely on.</p>
+
+    <h3>WhatsApp Orders</h3>
+
+    <div class="platform-section">
+      <div class="platform-name">WHATSAPP ORDER COMPLIANCE</div>
+      <h3>Consent Before Adding to Broadcast Lists</h3>
+      <p>One of the most common violations: adding all WhatsApp order customers to a broadcast list for daily menu sharing and promotions.</p>
+      <ul>
+        <li>Customer ordering once does NOT mean they consent to daily WhatsApp messages</li>
+        <li>Get explicit consent: "Can I add you to our daily menu broadcast? Reply YES to opt in."</li>
+        <li>Keep a record of who said YES</li>
+        <li>Honor opt-out requests immediately: remove from broadcast when asked</li>
+      </ul>
+      <h3>Chat Retention</h3>
+      <ul>
+        <li>Delete WhatsApp order chats after delivery + 30 days</li>
+        <li>Don't keep years of chat history with customer addresses and payment screenshots</li>
+        <li>For inactive customers (no orders in 6 months), delete the chat entirely</li>
+      </ul>
+    </div>
+
+    <h3>Phone Orders</h3>
+
+    <div class="platform-section">
+      <div class="platform-name">PHONE ORDER COMPLIANCE</div>
+      <h3>Customer Address Book</h3>
+      <p>Many restaurant owners save regular customers in their phone with names and addresses. This is personal data.</p>
+      <ul>
+        <li>Secure your phone with PIN/biometric lock</li>
+        <li>Do not share your phone with others who could access customer contacts</li>
+        <li>Delete inactive customer contacts (no orders in 1 year)</li>
+        <li>Do not use customer numbers for promotional calls without consent</li>
+      </ul>
+    </div>
+
+    <h3>Own Website Orders</h3>
+
+    <div class="platform-section">
+      <div class="platform-name">WEBSITE ORDER COMPLIANCE</div>
+      <ul>
+        <li>Publish a privacy policy on your website</li>
+        <li>Add consent checkbox at checkout: "I agree to the Privacy Policy" (unchecked by default)</li>
+        <li>Separate marketing consent: "Send me offers via WhatsApp/email" (optional, not required to complete order)</li>
+        <li>Ensure HTTPS (SSL certificate) on your website</li>
+        <li>Set data retention for your order database</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="dietary">Dietary Data: A Sensitive Category Restaurants Often Miss</h2>
+
+    <p>This is a uniquely food-specific DPDP concern that most restaurants completely overlook.</p>
+
+    <p>Dietary requirements can reveal:</p>
+
+    <ul>
+      <li><strong>Religious beliefs:</strong> Halal, Jain, kosher food preferences</li>
+      <li><strong>Health conditions:</strong> Diabetes-friendly, low-sodium, allergy information</li>
+      <li><strong>Lifestyle choices:</strong> Vegan, vegetarian preferences</li>
+    </ul>
+
+    <p>Under DPDP, data that reveals <strong>religious belief or health condition</strong> is treated with heightened sensitivity. Mishandling it carries higher reputational and legal risk.</p>
+
+    <div class="callout callout-warning">
+      <p><strong>⚠️ Real Risk:</strong> Imagine a restaurant's customer database leaks and reveals which customers ordered halal food or requested Jain meals. This exposes customers' religious identity to the public. The Data Protection Board can treat this as a severe violation due to the religious sensitivity of the data.</p>
+    </div>
+
+    <h3>How to Handle Dietary Data</h3>
+
+    <ul>
+      <li>Collect dietary preferences ONLY when necessary for order preparation</li>
+      <li>Do not profile customers by religion or health based on food choices</li>
+      <li>Store dietary data with restricted access (kitchen staff only, not marketing team)</li>
+      <li>Delete dietary history when customer requests data deletion</li>
+      <li>Never share dietary preference data with third parties</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="violations">Top DPDP Violations in Food Delivery</h2>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 1: Using Platform Order Data for WhatsApp Marketing (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> You download your Zomato order history, extract customer phone numbers, add them all to a WhatsApp broadcast list, and send daily menu updates.</p>
+      <p><strong>Why illegal:</strong> Customers consented to Zomato's terms — not your independent marketing. You're using data beyond the original purpose.</p>
+      <p><strong>Fix:</strong> Only market to customers who explicitly opted in through YOUR channel with YOUR consent process.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 2: No Privacy Policy for Direct Orders (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> Your restaurant website takes online orders but has no privacy policy. Your WhatsApp ordering service has no privacy notice.</p>
+      <p><strong>Why illegal:</strong> Every channel that collects personal data needs a privacy policy.</p>
+      <p><strong>Fix:</strong> Add a privacy policy to your website. Share your privacy policy link with WhatsApp customers on their first order.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 3: Sharing Customer Lists with Delivery Partners (₹250 Crore Risk)</div>
+      <p><strong>The mistake:</strong> You share a spreadsheet of customer names and delivery addresses with your contracted delivery rider, who now has a copy of your entire customer database on their personal phone.</p>
+      <p><strong>Why illegal:</strong> This is an uncontrolled data transfer that creates security risk. If the delivery rider loses their phone, your customers' data is exposed.</p>
+      <p><strong>Fix:</strong> Share only the specific order details needed for that delivery. Use platform-controlled delivery systems where possible.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 4: Storing Order Slips with Customer Data Indefinitely (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> Keeping years of printed order slips (with customer names, addresses, phone numbers) in a box in the storeroom.</p>
+      <p><strong>Why illegal:</strong> Paper records containing personal data are still covered by DPDP. Retention limits apply.</p>
+      <p><strong>Fix:</strong> Shred and destroy old order slips. Keep only what's needed for tax records. Destroy physical customer data after 30 days.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 5: Loyalty Programme Without Privacy Policy (₹50 Crore)</div>
+      <p><strong>The mistake:</strong> Your restaurant runs a loyalty stamp card or points programme. You collect customer names and phone numbers to track points but have no privacy policy explaining this.</p>
+      <p><strong>Why illegal:</strong> Any organised collection of customer data for a programme requires a privacy policy and consent.</p>
+      <p><strong>Fix:</strong> Add a simple privacy notice to loyalty enrolment: "We collect your name and phone to track your points. Read our Privacy Policy: [link]." Get their sign-off.</p>
+    </div>
+
+    <div class="violation-box">
+      <div class="violation-label">VIOLATION 6: Leaking Dietary Preference Data (₹50–250 Crore)</div>
+      <p><strong>The mistake:</strong> Customer database with dietary preferences (halal, Jain, vegan, allergy info) is stored in an unprotected Google Sheet accessible to all staff. A disgruntled employee shares it publicly.</p>
+      <p><strong>Why illegal:</strong> Dietary data reveals religious/health information. Security failure on sensitive data = maximum penalties.</p>
+      <p><strong>Fix:</strong> Restrict access to dietary data. Encrypt customer databases. Limit who can see what.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="checklist">Food Business DPDP Compliance Checklist</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Compliance Item</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Privacy policy published</strong> (website, WhatsApp notice, loyalty programme)</td><td>☐</td></tr>
+          <tr><td><strong>Platform order data NOT used for independent marketing</strong></td><td>☐</td></tr>
+          <tr><td><strong>WhatsApp broadcast consent</strong> (explicit opt-in only)</td><td>☐</td></tr>
+          <tr><td><strong>Partner dashboard secured</strong> (strong password, 2FA)</td><td>☐</td></tr>
+          <tr><td><strong>Order slips destroyed after delivery</strong> (not accumulated)</td><td>☐</td></tr>
+          <tr><td><strong>Customer data NOT shared with delivery riders in bulk</strong></td><td>☐</td></tr>
+          <tr><td><strong>Dietary preference data secured</strong> (restricted access)</td><td>☐</td></tr>
+          <tr><td><strong>Old WhatsApp chats deleted</strong> (after delivery + 30 days)</td><td>☐</td></tr>
+          <tr><td><strong>Customer database encrypted</strong> (if using CRM or OMS)</td><td>☐</td></tr>
+          <tr><td><strong>Loyalty programme privacy notice</strong> (if running one)</td><td>☐</td></tr>
+          <tr><td><strong>Data retention policy set</strong> (delete inactive customer data)</td><td>☐</td></tr>
+          <tr><td><strong>Privacy contact set up</strong> (privacy@yourrestaurant.in for requests)</td><td>☐</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <h2 id="faq">FAQ for Restaurant Owners</h2>
+
+    <div class="faq-item">
+      <h3>Does DPDP apply to Swiggy and Zomato restaurant partners?</h3>
+      <p><strong>Yes.</strong> Restaurant partners access customer names, phone numbers, and delivery addresses with every order. This makes you an independent Data Fiduciary. Swiggy/Zomato's compliance does not cover your obligations.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is customer location data personal data under DPDP?</h3>
+      <p><strong>Yes.</strong> Delivery addresses and GPS locations are personal data. You must use them only for order delivery and delete them after the retention period.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use customer order history for my own marketing?</h3>
+      <p><strong>Only with explicit consent.</strong> Customers on Swiggy/Zomato consented to the platform's terms — not your independent marketing. You need a fresh, separate consent to send them WhatsApp messages or SMS promotions.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does DPDP apply to cloud kitchens?</h3>
+      <p><strong>Yes.</strong> Cloud kitchens receive and process customer data with every order. The absence of dine-in customers doesn't change your DPDP obligations — delivery orders contain just as much personal data as any other order type.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What about dietary preferences — are they sensitive data?</h3>
+      <p><strong>Yes, treat them as sensitive.</strong> Dietary requirements can reveal religious beliefs (halal, Jain) or health conditions (allergies, diabetes). Store with restricted access and delete promptly when no longer needed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need a privacy policy if I only take orders on Swiggy and Zomato?</h3>
+      <p>If you <em>only</em> take platform orders and <em>never</em> store, download, or independently use customer data beyond what the platform shows you, your exposure is lower — but you still need a seller privacy policy explaining your data practices. If you also take direct orders, WhatsApp orders, or run a loyalty programme, a privacy policy is mandatory.</p>
+    </div>
+
+    <hr>
+
+    <div class="related-box">
+      <h3>Related Articles</h3>
+      <a href="https://guardata.in/blog/what-is-dpdp-act/" class="related-link">What is the DPDP Act? Explained</a>
+      <a href="https://guardata.in/dpdp-act-india/" class="related-link">DPDP Act India: Complete Guide</a>
+      <a href="https://guardata.in/blog/" class="related-link">All DPDP Articles</a>
+    </div>
+
+    <div class="author-box">
+      <div class="author-av">G</div>
+      <div class="author-info">
+        <h4>Written by Guardata Team</h4>
+        <p>Helping businesses achieve DPDP compliance.</p>
+        <div class="author-links">
+          <a href="mailto:founder@guardata.in" class="author-link">Email</a>
+          <a href="https://www.youtube.com/@Guardata" class="author-link">YouTube</a>
+          <a href="https://x.com/Guardata_in" class="author-link">X</a>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="toc-title">On this page</div>
+    <ul class="toc-list">
+      <li><a href="#applies" class="active">Does DPDP Apply to Food Businesses?</a></li>
+      <li><a href="#data">What Customer Data You Process</a></li>
+      <li><a href="#platform-vs-you">Platform vs Partner Responsibilities</a></li>
+      <li><a href="#swiggy-zomato">Swiggy &amp; Zomato Compliance</a></li>
+      <li><a href="#cloud-kitchen">Cloud Kitchen Compliance</a></li>
+      <li><a href="#direct-orders">Direct Orders</a></li>
+      <li><a href="#dietary">Dietary Data</a></li>
+      <li><a href="#violations">Top Violations</a></li>
+      <li><a href="#checklist">Compliance Checklist</a></li>
+      <li><a href="#faq">FAQ for Restaurants</a></li>
+    </ul>
+    <div class="sidebar-div"></div>
+    <div class="sidebar-cta">
+      <h4>Free Compliance Toolkit</h4>
+      <p>Audit readiness.</p>
+      <a href="https://guardata.in/tools">Get Started →</a>
+    </div>
+  </aside>
+</div>
+
+<script>
+const bar=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const d=document.documentElement;bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'});
+const links=document.querySelectorAll('.toc-list a');
+[...links].map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean).forEach(s=>{
+  new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const lnk=document.querySelector(`.toc-list a[href="#${e.target.id}"]`);if(lnk)lnk.classList.add('active')}})},{rootMargin:'-15% 0px -75% 0px'}).observe(s)
+});
+</script>
+</body>
+</html>
