@@ -1,293 +1,1954 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DPDP compliance for businesses. Generate privacy policies, consent banners, and stay compliant with India's Digital Personal Data Protection Act.">
-<title>Guardata - DPDP Compliance for Businesses</title>
-<link rel="canonical" href="https://guardata.in">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FK3BDMJCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  gtag('config', 'G-9FK3BDMJCV');
+</script>
+  <title>Guardata — Building DPDP tools for Businesses.</title>
+  <meta name="description" content="Everything your business needs to comply with the Digital Personal Data Protection Act.">
+  <meta name="keywords" content="DPDP Act, DPDP compliance, Digital Personal Data Protection Act 2023, privacy policy India, data protection India, DPDP checklist, consent banner India, data protection compliance tools">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Guardata">
+  <meta name="language" content="English">
+  <!-- <meta name="geo.region" content="IN"> <meta name="geo.placename" content="India"> --!>
+  <link rel="canonical" href="https://guardata.in/">
 
-body {
-  font-family: 'Manrope', -apple-system, sans-serif;
-  line-height: 1.6;
-  color: #0F172A;
-  background: #fff;
-}
+  <!-- ═══════════════════════════════════════════════
+       OPEN GRAPH (AIO / Social Sharing)
+  ════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guardata.in/">
+  <meta property="og:title" content="Guardata — Building DPDP tools for Businesses.">
+  <meta property="og:description" content="Everything your business needs to comply with the Digital Personal Data Protection Act.">
+  <meta property="og:image" content="https://guardata.in/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Guardata">
+  <meta property="og:locale" content="en_IN">
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  <!-- ═══════════════════════════════════════════════
+       TWITTER / X CARD
+  ════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@guardata_in">
+  <meta name="twitter:title" content="Guardata — Building DPDP tools for Businesses.">
+  <meta name="twitter:description" content="Guardata provides everything your business needs to comply with the Digital Personal Data Protection Act.">
+  <meta name="twitter:image" content="https://guardata.in/assets/og-image.png">
 
-/* Header */
-header {
-  padding: 20px 0;
-  border-bottom: 1px solid #E2E8F0;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #0F4C81;
-  text-decoration: none;
-}
-
-.logo-g {
-  color: #FF6B35;
-}
-
-nav a {
-  margin-left: 32px;
-  color: #64748B;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #FF6B35;
-}
-
-/* Hero */
-.hero {
-  padding: 80px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-}
-
-.hero-highlight {
-  color: #FF6B35;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #64748B;
-  max-width: 600px;
-  margin: 0 auto 32px;
-}
-
-.cta-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
-  color: white;
-  padding: 16px 36px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 17px;
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
-  transition: all 0.3s;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
-}
-
-.cta-note {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #64748B;
-}
-
-/* Features */
-.features {
-  padding: 60px 0;
-  background: #F8FAFC;
-}
-
-.features h2 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-}
-
-.feature-card {
-  background: white;
-  padding: 32px;
-  border-radius: 12px;
-  border: 1px solid #E2E8F0;
-}
-
-.feature-card h3 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.feature-card p {
-  color: #64748B;
-  line-height: 1.7;
-}
-
-/* Resources */
-.resources {
-  padding: 60px 0;
-}
-
-.resources h2 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.resource-list {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.resource-item {
-  display: block;
-  padding: 20px 24px;
-  background: white;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  text-decoration: none;
-  color: #0F4C81;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-.resource-item:hover {
-  border-color: #FF6B35;
-  background: #FFFBF0;
-  transform: translateX(4px);
-}
-
-/* Footer */
-footer {
-  padding: 40px 0;
-  background: #0F172A;
-  color: #94A3B8;
-  text-align: center;
-}
-
-footer a {
-  color: #94A3B8;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #FF6B35;
-}
-
-@media (max-width: 768px) {
-  nav a {
-    margin-left: 16px;
-    font-size: 14px;
+  <!-- ═══════════════════════════════════════════════
+       STRUCTURED DATA — SCHEMA.ORG (AEO / GEO)
+  ════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://guardata.in/#organization",
+        "name": "Guardata",
+        "url": "https://guardata.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://guardata.in/logo.svg",
+          "width": 200,
+          "height": 50
+        },
+        "description": "Guardata provides everything your business needs to comply with the Digital Personal Data Protection Act ",
+        "foundingDate": "2026",
+    <!--  "areaServed": {
+          "@type": "Country",
+          "name": "India" --!>
+        },
+        "knowsAbout": ["DPDP Act", "Data Protection", "Privacy Policy", "GDPR", "Indian Data Protection Law"],
+        "sameAs": [
+         <!-- "https://www.linkedin.com/company/guardata" --!>
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://guardata.in/#website",
+        "url": "https://guardata.in",
+        "name": "Guardata",
+        "description": "Everything your business needs to comply with the Digital Personal Data Protection Act.",
+        "publisher": { "@id": "https://guardata.in/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://guardata.in/blog?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://guardata.in/#webpage",
+        "url": "https://guardata.in",
+        "name": "Guardata — Building DPDP tools for Businesses.",
+        "description": "Everything your business needs to comply with the Digital Personal Data Protection Act. ",
+        "isPartOf": { "@id": "https://guardata.in/#website" },
+        "about": { "@id": "https://guardata.in/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://guardata.in/"}]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "DPDP Compliance Free Tools",
+        "description": "Everything your business needs to comply with the Digital Personal Data Protection Act ",
+        "url": "https://guardata.in/tools",
+        "numberOfItems": 7,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Free Privacy Policy Generator","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":2,"name":"DPDP Compliance Checklist PDF","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":3,"name":"DPDP Compliance Checker","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":4,"name":"Consent Banner Generator","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":5,"name":"DPDP Penalty Calculator","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":6,"name":"Data Breach Response Template","url":"https://guardata.in/tools"},
+          {"@type":"ListItem","position":7,"name":"DPO Appointment Template","url":"https://guardata.in/tools"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the DPDP Act?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Digital Personal Data Protection Act 2023 (DPDP Act) is India's primary data protection law. It governs how organisations collect, process, and store personal data of Indian citizens, and sets penalties of up to ₹250 crore for violations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who needs to comply with the DPDP Act?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All businesses — startups, SMEs, enterprises — that collect or process personal data of individuals in India must comply with the DPDP Act 2023, regardless of where the business is incorporated."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the penalty for violating the DPDP Act?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DPDP Act penalties can reach up to ₹250 crore (approximately $30 million USD) for serious violations such as not implementing appropriate security safeguards. Use Guardata's free Penalty Calculator to estimate your risk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Guardata's DPDP toolkit free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Guardata's core DPDP toolkit — including the Privacy Policy Generator, Compliance Checklist PDF, Consent Banner Generator, and Penalty Calculator — is completely free for businesses."
+            }
+          }
+        ]
+      }
+    ]
   }
-  
-  .hero {
-    padding: 48px 0;
-  }
-  
-  .features, .resources {
-    padding: 40px 0;
-  }
-}
-</style>
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════════════════════
+       BRAND TOKENS
+    ═══════════════════════════════════════════════════ */
+    :root {
+      --primary:        #FF6B35;
+      --primary-dark:   #E55A2B;
+      --primary-light:  rgba(255,107,53,0.08);
+      --navy:           #0F4C81;
+      --navy-light:     #1E5A8E;
+      --navy-deep:      #0A3560;
+      --accent:         #00B4D8;
+      --success:        #10B981;
+      --white:          #FFFFFF;
+      --off-white:      #FAFBFC;
+      --light-gray:     #F5F7FA;
+      --border:         #E4E7EB;
+      --text:           #0F172A;
+      --text-secondary: #64748B;
+      --text-muted:     #94A3B8;
+
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  28px;
+
+      --shadow-sm:  0 1px 3px rgba(15,23,42,0.06);
+      --shadow-md:  0 4px 16px rgba(15,23,42,0.08);
+      --shadow-lg:  0 8px 32px rgba(15,23,42,0.12);
+      --shadow-orange: 0 4px 20px rgba(255,107,53,0.3);
+    }
+
+    /* ══════════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Manrope', -apple-system, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ══════════════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════════════ */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+    }
+
+    /* ══════════════════════════════════════════════════
+       NAVIGATION — Logo placement: top-left of sticky nav
+    ═══════════════════════════════════════════════════ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 32px;
+    }
+
+    /* ─────────────────────────────────────────────
+       LOGO — Standard placement: top-left of nav
+       
+       HOW TO ADD YOUR REAL LOGO IMAGE:
+       Replace the inline SVG inside .logo-link with:
+       <img src="/your-logo.png" alt="Guardata" height="36" width="auto">
+       
+       Or for SVG file:
+       <img src="/logo.svg" alt="Guardata" height="36">
+       
+       Keep the <a class="logo-link" href="/"> wrapper.
+    ───────────────────────────────────────────── */
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      transition: opacity 0.2s;
+    }
+
+    .logo-link:hover { opacity: 0.85; }
+
+    /* Inline SVG logo — matches brand guide Concept 1 exactly */
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+      box-shadow: 0 2px 8px rgba(255,107,53,0.3);
+      flex-shrink: 0;
+    }
+
+    .logo-wordmark {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-wordmark .g { color: var(--primary); }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--light-gray);
+    }
+
+    .nav-links a.active {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav-ghost {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-nav-ghost:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-nav-primary {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--primary);
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(255,107,53,0.25);
+    }
+
+    .btn-nav-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 4px 14px rgba(255,107,53,0.35);
+      transform: translateY(-1px);
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Mobile nav */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 20px 20px;
+      border-top: 1px solid var(--border);
+      background: white;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s;
+    }
+
+    .mobile-menu a:hover { background: var(--light-gray); }
+
+    .mobile-menu .btn-nav-primary {
+      margin-top: 8px;
+      text-align: center;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links, .btn-nav-ghost { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    @media (max-width: 480px) {
+      .btn-nav-primary { display: none; }
+    }
+
+    /* ══════════════════════════════════════════════════
+       ANNOUNCEMENT BAR
+    ═══════════════════════════════════════════════════ */
+    .announcement {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .announcement a {
+      color: var(--primary);
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    .announcement a:hover { text-decoration: underline; }
+
+    /* ══════════════════════════════════════════════════
+       HERO — Scroll 1
+    ═══════════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 45%, var(--navy-light) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 80px;
+    }
+
+    /* Decorative background mesh */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -150px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(0,180,216,0.10) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Subtle grid overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px 6px 8px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.01em;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .hero-badge-dot {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(36px, 5.5vw, 62px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+
+    .hero h1 .accent-orange { color: var(--primary); }
+    .hero h1 .accent-blue  { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(12px, 2vw, 15px);
+      color: rgba(255,255,255,0.72);
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 26px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: var(--shadow-orange);
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255,107,53,0.4);
+    }
+
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-ghost-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: all 0.22s;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-ghost-white:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    /* Hero trust row */
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .trust-stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .trust-stat-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+    }
+
+    .trust-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.4;
+      max-width: 80px;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 32px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ══════════════════════════════════════════════════
+       SECTION COMMON
+    ═══════════════════════════════════════════════════ */
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--off-white);
+    }
+
+    .section-header {
+      margin-bottom: 52px;
+    }
+
+    .section-header.centered {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 52px;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 540px;
+    }
+
+    .section-header.centered .section-desc { margin: 0 auto; }
+
+    /* ══════════════════════════════════════════════════
+       SCROLL 2 — DPDP TOOLKIT / RESOURCES
+    ═══════════════════════════════════════════════════ */
+    #dpdp-toolkit {
+      scroll-margin-top: 80px;
+    }
+
+    .toolkit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .toolkit-grid { grid-template-columns: 1fr; }
+    }
+
+    .tool-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .tool-card:hover {
+      border-color: rgba(255,107,53,0.3);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .tool-card:hover::before { opacity: 1; }
+
+    .tool-card.featured {
+      border-color: var(--primary);
+      background: linear-gradient(145deg, #FFF7F4 0%, white 60%);
+    }
+
+    .tool-card.featured::before { opacity: 1; }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .tool-icon.orange  { background: rgba(255,107,53,0.10); }
+    .tool-icon.navy    { background: rgba(15,76,129,0.08); }
+    .tool-icon.accent  { background: rgba(0,180,216,0.10); }
+    .tool-icon.green   { background: rgba(16,185,129,0.10); }
+    .tool-icon.purple  { background: rgba(124,58,237,0.09); }
+    .tool-icon.red     { background: rgba(239,68,68,0.09); }
+    .tool-icon.teal    { background: rgba(20,184,166,0.09); }
+
+    .tool-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 100px;
+    }
+
+    .tool-badge.free {
+      background: rgba(16,185,129,0.12);
+      color: var(--success);
+      border: 1px solid rgba(16,185,129,0.25);
+    }
+
+    .tool-badge.pdf {
+      background: rgba(15,76,129,0.10);
+      color: var(--navy);
+      border: 1px solid rgba(15,76,129,0.2);
+    }
+
+    .tool-badge.new {
+      background: rgba(255,107,53,0.12);
+      color: var(--primary);
+      border: 1px solid rgba(255,107,53,0.25);
+    }
+
+    .tool-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .tool-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      transition: color 0.2s, gap 0.2s;
+      margin-top: auto;
+    }
+
+    .tool-link:hover {
+      color: var(--primary);
+      gap: 10px;
+    }
+
+    .tool-link svg {
+      transition: transform 0.2s;
+    }
+
+    .tool-link:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Toolkit CTA row */
+    .toolkit-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 44px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline-navy {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--navy);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-outline-navy:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* ══════════════════════════════════════════════════
+       SCROLL 3 — SAAS APP (Coming Soon)
+    ═══════════════════════════════════════════════════ */
+    #compliance-app {
+      scroll-margin-top: 80px;
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #compliance-app::before {
+      content: '';
+      position: absolute;
+      top: -60%; right: -10%;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(255,107,53,0.08) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #compliance-app::after {
+      content: '';
+      position: absolute;
+      bottom: -40%; left: -5%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,180,216,0.07) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .app-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 96px 0;
+    }
+
+    .app-coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .app-coming-soon::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .app-logo-display {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: white;
+      box-shadow: 0 8px 32px rgba(255,107,53,0.35);
+    }
+
+    .app-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .app-name .suffix {
+      color: rgba(255,255,255,0.45);
+      font-weight: 400;
+    }
+
+    .app-tagline {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 36px;
+    }
+
+    .app-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-app-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: all 0.22s;
+      box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+      letter-spacing: -0.01em;
+    }
+
+    .btn-app-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255,107,53,0.5);
+    }
+
+    .btn-app-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.85);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: all 0.22s;
+    }
+
+    .btn-app-ghost:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    /* ══════════════════════════════════════════════════
+       FAQ SECTION — AEO (Answer Engine Optimisation)
+    ═══════════════════════════════════════════════════ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    .faq-item {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover { border-color: rgba(255,107,53,0.3); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      transition: background 0.2s;
+    }
+
+    .faq-question:hover { background: var(--off-white); }
+
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TRUST BAR
+    ═══════════════════════════════════════════════════ */
+    .trust-bar {
+      background: var(--light-gray);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    .trust-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .trust-item-icon {
+      width: 32px;
+      height: 32px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ══════════════════════════════════════════════════
+       FEATURED ARTICLE / BLOG PREVIEW
+    ═══════════════════════════════════════════════════ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid .blog-card:first-child { grid-column: span 2; }
+    }
+
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-grid .blog-card:first-child { grid-column: span 1; }
+    }
+
+    .blog-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(255,107,53,0.25);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .blog-thumb {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card:first-child .blog-thumb { height: 220px; }
+
+    .blog-thumb-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .blog-thumb-tag {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .blog-content {
+      padding: 20px 22px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .blog-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      flex: 1;
+    }
+
+    .blog-card:first-child .blog-title { font-size: 20px; }
+
+    .blog-read-more {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+    }
+
+    .blog-card:hover .blog-read-more { gap: 9px; }
+
+    /* ══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    .site-footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 0;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    .footer-brand-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+      margin: 16px 0 20px;
+      max-width: 280px;
+    }
+
+    .footer-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+    }
+
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-wordmark {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-col-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: white; }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .social-btn:hover { background: rgba(255,255,255,0.15); }
+
+    .footer-bottom {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover { color: rgba(255,255,255,0.75); }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       UTILITY
+    ═══════════════════════════════════════════════════ */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-inner > * {
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
+    .hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
+    .hero-inner > *:nth-child(3) { animation-delay: 0.25s; }
+    .hero-inner > *:nth-child(4) { animation-delay: 0.35s; }
+    .hero-inner > *:nth-child(5) { animation-delay: 0.45s; }
+  </style>
 </head>
+
 <body>
 
-<header>
+
+<header class="site-header" role="banner">
   <div class="container">
-    <div class="header-content">
-      <a href="/" class="logo"><span class="logo-g">G</span>uardata</a>
-      <nav>
-        <a href="/dpdp-act-india/">DPDP Guide</a>
-        <a href="/blog/">Blog</a>
-      </nav>
-    </div>
+    <nav class="nav" aria-label="Main navigation">
+
+      <!-- ─────────────────────────────────────────
+           LOGO — Placed top-left of every page.
+           
+           To use YOUR logo image instead of this inline SVG:
+           Replace the .logo-icon + .logo-wordmark below with:
+           
+             <img src="/logo.png"
+                  alt="Guardata"
+                  height="36"
+                  width="auto"
+                  loading="eager">
+           
+           Keep the <a class="logo-link" href="/"> wrapper intact.
+      ──────────────────────────────────────────── -->
+      <a href="/" class="logo-link" aria-label="Guardata — Go to homepage">
+        <!-- Inline SVG logo: swap with <img> tag once you have your logo file -->
+       <img src="C:\Users\nimma\Documents\Guard\guardata-site\logo.svg" alt="Guardata" height="58" width="auto" loading="eager">
+
+      </a>
+
+      <!-- Nav links -->
+      <ul class="nav-links" role="list">
+        <li><a href="https://guardata.in/dpdp-act-india" aria-label="DPDP Act guide">DPDP Act</a></li>
+        <li><a href="https://guardata.in/tools" aria-label="Free compliance tools">Free Tools</a></li>
+        <li><a href="https://guardata.in/blog" aria-label="Compliance blog">Blog</a></li>
+       <!-- <li><a href="/about" aria-label="About Guardata">About</a></li> -->
+      </ul>
+
+      <div class="nav-right">
+        <a href="https://app.guardata.in/" class="btn-nav-ghost" target="_blank" rel="noopener" aria-label="Guardata">Coming Soon</a>
+        <a href="https://guardata.in/tools" class="btn-nav-primary" aria-label="Access free DPDP tools">Free Toolkit</a>
+        <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile nav menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="https://guardata.in/dpdp-act-india">DPDP Act</a>
+    <a href="https://guardata.in/tools">Free Tools</a>
+    <a href="https://guardata.in/blog">Blog</a>
+    <!-- <a href="/about">About</a> -->
+    <a href="https://app.guardata.in/" class="btn-nav-primary" target="_blank" rel="noopener">Launch App →</a>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <h1>DPDP Compliance for <span class="hero-highlight">Indian Businesses</span></h1>
-      <p>Generate DPDP-compliant privacy policies and consent banners. Stay compliant with India's Digital Personal Data Protection Act.</p>
-      <a href="/dpdp-act-india/" class="cta-btn">Learn About DPDP Compliance →</a>
-      <p class="cta-note">Free resources • Compliance deadline: May 13, 2027</p>
-    </div>
-  </section>
+<!-- ════════════════════════════════════════════════════
+     SCROLL 1 — HERO
+════════════════════════════════════════════════════ -->
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container hero-inner">
 
-  <section class="features">
-    <div class="container">
-      <h2>Why DPDP Compliance Matters</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>⚠️ Mandatory from May 2027</h3>
-          <p>Every business processing personal data of Indian citizens must comply with DPDP. Penalties up to ₹250 crore for violations.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🚀 No Size Exemptions</h3>
-          <p>DPDP applies to startups, SMEs, and enterprises equally. Even a 2-person team collecting emails must comply.</p>
-        </div>
-        <div class="feature-card">
-          <h3>✅ Affordable Solutions</h3>
-          <p>Basic compliance costs ₹5,000-₹20,000. You don't need expensive lawyers or consultants to get started.</p>
-        </div>
+    <div class="hero-badge" role="note">
+      <span class="hero-badge-dot" aria-hidden="true">🇮🇳</span>
+      Built for businesses · DPDP Act 2023
+    </div>
+
+    <h1 id="hero-heading">
+      <span class="accent-orange">DPDP Compliance</span><br>
+      Made Simple
+    </h1>
+
+    <p class="hero-sub">
+      Everything your business needs to comply with the Digital Personal Data Protection Act 2023 — privacy policies, checklists, consent banners, penalty calculators and more. Free. No signup needed.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://guardata.in/tools" class="btn-primary" aria-label="Access free DPDP toolkit">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Access Free Toolkit
+      </a>
+      <a href="https://guardata.in/dpdp-act-india" class="btn-ghost-white" aria-label="Read DPDP Act guide">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 2h8a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M5.5 6h5M5.5 9h5M5.5 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        What is DPDP Act?
+      </a>
+    </div>
+
+    <div class="hero-trust" role="list" aria-label="Key statistics">
+      <div class="trust-stat" role="listitem">
+        <div class="trust-stat-num">7+</div>
+        <div class="trust-stat-label">Free compliance tools</div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-stat" role="listitem">
+        <div class="trust-stat-num">₹250Cr</div>
+        <div class="trust-stat-label">Max penalty you could avoid</div>
+      </div>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <div class="trust-stat" role="listitem">
+        <div class="trust-stat-num">2023</div>
+        <div class="trust-stat-label">DPDP Act — now in force</div>
       </div>
     </div>
-  </section>
 
-  <section class="resources">
-    <div class="container">
-      <h2>Free DPDP Resources</h2>
-      <div class="resource-list">
-        <a href="/dpdp-act-india/" class="resource-item">📖 DPDP Act India: Complete Compliance Guide</a>
-        <a href="/blog/what-is-dpdp-act/" class="resource-item">📌 What is the DPDP Act? Explained</a>
-        <a href="/blog/dpdp-penalties/" class="resource-item">⚠️ DPDP Penalties: ₹250 Crore Fine Breakdown</a>
-        <a href="/blog/dpdp-for-startups/" class="resource-item">🚀 DPDP for Startups: Founder's Guide</a>
-        <a href="/blog/" class="resource-item">📚 All DPDP Articles →</a>
+  </div>
+</section>
+
+<!-- Trust bar -->
+<div class="trust-bar" role="complementary" aria-label="Trust signals">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🔒</span>
+        DPDP Act 2023 Aligned
+      </div>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">✅</span>
+        No Signup Required
+      </div>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🇮🇳</span>
+        Made for India
+      </div>
+      <!-- <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">📋</span>
+        Lawyer-Reviewed Templates
+      </div> --!>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">⚡</span>
+        Always Free
       </div>
     </div>
-  </section>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     SCROLL 2 — DPDP TOOLKIT / RESOURCES
+════════════════════════════════════════════════════ -->
+<section id="dpdp-toolkit" class="section" aria-labelledby="toolkit-heading">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-eyebrow">DPDP Resources &amp; Toolkit</div>
+      <h2 class="section-title" id="toolkit-heading">
+        Everything You Need to Be DPDP Compliant — Free
+      </h2>
+      <p class="section-desc">
+        Practical tools and templates built specifically for Indian businesses navigating the Digital Personal Data Protection Act 2023.
+      </p>
+    </div>
+
+    <div class="toolkit-grid" role="list" aria-label="DPDP compliance tools">
+
+      <!-- Tool 1 — Privacy Policy -->
+      <article class="tool-card featured" role="listitem">
+        <div class="tool-badge free">Free</div>
+        <div class="tool-icon orange" aria-hidden="true">📄</div>
+        <div class="tool-name">Free Privacy Policy Generator</div>
+        <p class="tool-desc">Generate a fully DPDP Act-compliant Privacy Policy for your website or app in minutes. Customised for Indian businesses. Download as PDF or copy HTML.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Generate your free privacy policy">
+          Generate Now
+          <svg class="tool-link-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Tool 2 — Compliance Checklist -->
+      <article class="tool-card" role="listitem">
+        <div class="tool-badge pdf">PDF</div>
+        <div class="tool-icon navy" aria-hidden="true">✅</div>
+        <div class="tool-name">DPDP Compliance Checklist PDF</div>
+        <p class="tool-desc">A step-by-step checklist covering all DPDP Act obligations — data collection, consent, security safeguards, grievance redressal, and Data Fiduciary duties.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Download DPDP compliance checklist PDF">
+          Download PDF
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Tool 3 — Compliance Checker -->
+      <article class="tool-card" role="listitem">
+        <div class="tool-badge new">Interactive</div>
+        <div class="tool-icon accent" aria-hidden="true">🔍</div>
+        <div class="tool-name">DPDP Compliance Checker</div>
+        <p class="tool-desc">Answer 20 quick questions about your data practices and get an instant compliance score with prioritised gaps and a personalised action plan.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Check your DPDP compliance score">
+          Check Compliance
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Tool 4 — Consent Banner -->
+      <article class="tool-card" role="listitem">
+        <div class="tool-badge free">Free</div>
+        <div class="tool-icon green" aria-hidden="true">🍪</div>
+        <div class="tool-name">Consent Banner Generator</div>
+        <p class="tool-desc">Create a DPDP-compliant cookie and data consent banner for your website. Choose your style, colours, and copy. Get embed-ready HTML/JS code instantly.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Create your consent banner">
+          Build Banner
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Tool 5 — Penalty Calculator -->
+      <article class="tool-card" role="listitem">
+        <div class="tool-badge new">Calculator</div>
+        <div class="tool-icon red" aria-hidden="true">⚖️</div>
+        <div class="tool-name">DPDP Penalty Calculator</div>
+        <p class="tool-desc">Understand your potential fine exposure under the DPDP Act. Based on violation type, data volume, and business size — with reference to actual Schedule penalties.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Calculate your DPDP penalty risk">
+          Calculate Risk
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Tool 6 — Data Breach Response -->
+      <article class="tool-card" role="listitem">
+        <div class="tool-badge pdf">Template</div>
+        <div class="tool-icon purple" aria-hidden="true">🚨</div>
+        <div class="tool-name">Data Breach Response Template</div>
+        <p class="tool-desc">A ready-to-use incident response template to notify the Data Protection Board within the DPDP Act's required timeline. Includes breach log and communication drafts.</p>
+        <a href="https://guardata.in/tools" class="tool-link" aria-label="Download data breach response template">
+          Get Template
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </article>
+
+        </div>
+
+    <!-- CTA row below grid -->
+    <div class="toolkit-cta-row">
+      <a href="https://guardata.in/tools" class="btn-primary" aria-label="View all free DPDP tools">
+        View All Free Tools
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://guardata.in/dpdp-act-india" class="btn-outline-navy" aria-label="Read DPDP Act guide">
+        DPDP Act Guide →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SCROLL 3 — SAAS APP (Coming Soon)
+     No text content — name + button only
+════════════════════════════════════════════════════ -->
+<section id="compliance-app" aria-labelledby="app-heading">
+  <div class="app-inner">
+
+    <div class="app-coming-soon" role="status" aria-live="polite">
+      Coming Soon
+    </div>
+
+    <div class="app-logo-display" aria-hidden="true">
+      <div class="app-icon">G</div>
+      <div class="app-name">
+        Guardata <span class="suffix">App</span>
+      </div>
+    </div>
+
+    <h2 id="app-heading" class="sr-only">Guardata App — Coming Soon</h2>
+
+    <p class="app-tagline">Guardata Compliance Platform</p>
+
+    <div class="app-actions">
+      <a href="https://app.guardata.in/" class="btn-app-primary" target="_blank" rel="noopener" aria-label="Launch Guardata compliance app">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 3h10v10H3zM8 7v4M8 3v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Launch App
+      </a>
+    <!--  <a href="#notify" class="btn-app-ghost" aria-label="Get notified when the app launches">
+        Notify Me →
+      </a> --!>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FAQ — Answer Engine Optimisation (AEO)
+════════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-eyebrow">Common Questions</div>
+      <h2 class="section-title" id="faq-heading">Frequently Asked About DPDP Act</h2>
+      <p class="section-desc">Plain answers to the questions Indian businesses ask most about data protection compliance.</p>
+    </div>
+
+    <div class="faq-grid" role="list" aria-label="Frequently asked questions about DPDP Act">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-1">
+          What is the DPDP Act 2023?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-1" role="region">
+          <div class="faq-answer-inner">
+            The Digital Personal Data Protection Act 2023 (DPDP Act) is India's primary data privacy law. It governs how organisations collect, process, store and delete personal data of individuals in India — and sets penalties of up to ₹250 crore for serious violations.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-2">
+          Who needs to comply with the DPDP Act?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-2" role="region">
+          <div class="faq-answer-inner">
+            Any business — startup, SME or enterprise — that processes personal data of individuals located in India must comply, regardless of where the company is incorporated. This includes websites, apps, and offline data collection.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-3">
+          What is the penalty for violating the DPDP Act?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-3" role="region">
+          <div class="faq-answer-inner">
+            Penalties range from ₹10,000 for minor breaches up to ₹250 crore for failing to implement adequate security safeguards. Use our free Penalty Calculator to estimate your business's risk exposure.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-4">
+          Is a Privacy Policy mandatory under the DPDP Act?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-4" role="region">
+          <div class="faq-answer-inner">
+            Yes. Every Data Fiduciary must provide a clear Privacy Notice to users before collecting their data. It must explain what data is collected, the purpose, how long it is retained, and how users can exercise their rights. Generate yours free at Guardata.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-5">
+          What is a Data Fiduciary under the DPDP Act?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-5" role="region">
+          <div class="faq-answer-inner">
+            A Data Fiduciary is any person or organisation that determines the purpose and means of processing personal data. If your business collects data from users — through a form, app, or website — you are likely a Data Fiduciary under the DPDP Act.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" aria-controls="faq-6">
+          Are Guardata's compliance tools really free?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="faq-answer" id="faq-6" role="region">
+          <div class="faq-answer-inner">
+            Yes — the Privacy Policy Generator, DPDP Compliance Checklist, Consent Banner Generator, Penalty Calculator, and all other toolkit items on this page are completely free. No account required.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer>
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p>Guardata © 2026 • <a href="/dpdp-act-india/">DPDP Guide</a> • <a href="/blog/">Blog</a></p>
-    <p style="margin-top: 12px; font-size: 14px;">Helping Indian businesses achieve DPDP compliance</p>
+    <div class="footer-top">
+
+      <!-- Brand column -->
+      <div>
+        <!-- Footer logo — same pattern as nav: swap <img> if you have the file -->
+       <!-- <a href="/" class="footer-logo-wrap" aria-label="Guardata homepage">
+          <div class="footer-logo-icon" aria-hidden="true">G</div> --!>
+        </a>
+        <p class="footer-brand-desc">
+          Building DPDP tools for Businesses. Helping Indian businesses navigate the Digital Personal Data Protection Act 2023.
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://twitter.com/guardata_in" class="social-btn" target="_blank" rel="noopener" aria-label="Guardata on X (Twitter)">𝕏</a>
+	  <a href="https://youtube.com/@guardata" class="social-btn" target="_blank" rel="noopener" aria-label="Guardata on Youtube">Y</a>
+
+        </div>
+      </div>
+
+      <!-- DPDP Resources -->
+      <nav aria-label="DPDP Resources">
+        <div class="footer-col-title">DPDP Toolkit</div>
+        <ul class="footer-links" role="list">
+          <li><a href="https://guardata.in/tools">Privacy Policy Generator</a></li>
+          <li><a href="https://guardata.in/tools">Compliance Checklist PDF</a></li>
+          <li><a href="https://guardata.in/tools">Compliance Checker</a></li>
+          <li><a href="https://guardata.in/tools">Consent Banner</a></li>
+          <li><a href="https://guardata.in/tools">Penalty Calculator</a></li>
+        </ul>
+      </nav>
+
+      <!-- Learn -->
+      <nav aria-label="Learn about DPDP">
+        <div class="footer-col-title">Learn</div>
+        <ul class="footer-links" role="list">
+          <li><a href="https://guardata.in/blog">Blog</a></li>
+          <li><a href="https://guardata.in/blog/what-is-dpdp-act">What is DPDP Act?</a></li>
+          <li><a href="https://guardata.in/blog/dpdp-for-startups">DPDP for Startups</a></li>
+          <li><a href="https://guardata.in/blog/dpdp-for-ecommerce">DPDP for E-Commerce</a></li>
+          <li><a href="https://guardata.in/blog/dpdp-social-commerce">DPDP Social Commerce</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company -->
+      <nav aria-label="Company links">
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links" role="list">
+         <!-- <li><a href="/about">About</a></li> --!>
+          <li><a href="https://app.guardata.in/" target="_blank" rel="noopener">Compliance App ↗</a></li>
+          <li><a href="mailto:founder@guardata.in" >Contact</a></li>
+          <li><a href="https://guardata.in/privacy-policy">Privacy Policy</a></li>
+          <!-- <li><a href="/terms">Terms of Use</a></li> --!>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Guardata. Built for businesses.</p>
+      <div class="footer-bottom-links">
+        <a href="https://guardata.in/privacy-policy">Privacy</a>
+        <!-- <a href="/terms">Terms</a> --!>
+        <!-- <a href="/sitemap.xml">Sitemap</a> --!>
+      </div>
+    </div>
   </div>
 </footer>
+
+<!-- ════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+<script>
+  /* Mobile menu toggle */
+  function toggleMenu(btn) {
+    const menu = document.getElementById('mobile-menu');
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+
+  /* Scroll reveal — simple IntersectionObserver */
+  const revealEls = document.querySelectorAll('.tool-card, .blog-card, .faq-item, .trust-item');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = (i * 0.04) + 's';
+          entry.target.style.animation = 'fadeUp 0.5s ease both';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => {
+      el.style.opacity = '0';
+      observer.observe(el);
+    });
+  }
+
+  /* Close mobile menu on outside click */
+  document.addEventListener('click', (e) => {
+    const header = document.querySelector('.site-header');
+    if (!header.contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+</script>
 
 </body>
 </html>
