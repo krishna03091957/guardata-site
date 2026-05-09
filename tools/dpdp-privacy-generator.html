@@ -1,1 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FK3BDMJCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9FK3BDMJCV');
+</script>
+
+<title>DPDP Privacy Policy Generator — Guardata</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ── GUARDATA BRAND TOKENS ── */
+  :root {
+    --primary:        #FF6B35;
+    --primary-dark:   #E55A2B;
+    --primary-pale:   #FFF4F0;
+    --secondary:      #0F4C81;
+    --secondary-lt:   #1E5A8E;
+    --accent:         #00B4D8;
+    --accent-pale:    #E6F9FD;
+    --success:        #10B981;
+    --success-pale:   #F0FDF4;
+    --white:          #FFFFFF;
+    --off-white:      #FAFBFC;
+    --light-gray:     #F5F7FA;
+    --border:         #E4E7EB;
+    --text:           #0F172A;
+    --text-secondary: #64748B;
+    --red:            #DC2626;
+    --tag-bg:         #FFF4F0;
+    --tag-col:        #C2410C;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--light-gray);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--secondary);
+    padding: 13px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 2px 12px rgba(15,76,129,0.2);
+  }
+  .logo-upload-zone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .logo-preview-wrap {
+    height: 36px;
+    min-width: 110px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px dashed rgba(255,255,255,0.28);
+    transition: border-color 0.2s;
+    cursor: pointer;
+    padding: 0 8px;
+  }
+  .logo-preview-wrap:hover { border-color: var(--primary); }
+  .logo-preview-wrap img { max-width: 100%; max-height: 32px; object-fit: contain; display: none; }
+  .logo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .logo-placeholder svg { width: 13px; height: 13px; color: rgba(255,255,255,0.4); flex-shrink: 0; }
+  #logo-file-input { display: none; }
+  .logo-hint { font-size: 10.5px; color: rgba(255,255,255,0.3); font-weight: 600; }
+
+  .topbar-links {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+  }
+  .topbar-links a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .topbar-links a:hover { color: white; }
+  .topbar-links .btn-nav {
+    background: var(--primary);
+    color: white !important;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+  .topbar-links .btn-nav:hover { background: var(--primary-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-lt) 100%);
+    padding: 52px 40px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,107,53,0.13) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-inner { max-width: 860px; position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .hero-badge span { width: 6px; height: 6px; background: var(--primary); border-radius: 50%; display: inline-block; }
+  .hero h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .hero h1 em { font-style: italic; color: var(--primary); }
+  .hero p { color: rgba(255,255,255,0.7); font-size: 12	px; max-width: 580px; line-height: 1.7; }
+  .hero-stats { display: flex; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
+  .hero-stat { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: rgba(255,255,255,0.55); font-weight: 500; }
+  .hero-stat svg { width: 14px; height: 14px; color: var(--primary); }
+  .hero-stat strong { color: rgba(255,255,255,0.85); font-weight: 700; }
+
+  /* ── LAYOUT ── */
+  .main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 40px 80px;
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* ── FORM PANEL ── */
+  .form-panel {
+    position: sticky;
+    top: 63px;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .form-panel::-webkit-scrollbar { width: 5px; }
+  .form-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .info-strip {
+    background: var(--secondary);
+    color: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .info-strip h4 { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .info-strip ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .info-strip ul li { display: flex; gap: 8px; align-items: flex-start; color: rgba(255,255,255,0.7); font-size: 12.5px; line-height: 1.5; }
+  .info-strip ul li::before { content: "§"; color: var(--primary); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .info-strip .blog-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-top: 12px; color: var(--accent);
+    text-decoration: none; font-size: 12.5px; font-weight: 700; transition: color 0.2s;
+  }
+  .info-strip .blog-link:hover { color: white; }
+  .info-strip .blog-link svg { width: 12px; height: 12px; }
+
+  .section-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .section-card:focus-within { box-shadow: 0 0 0 2px rgba(255,107,53,0.25); border-color: var(--primary); }
+
+  .section-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; user-select: none; transition: background 0.15s;
+  }
+  .section-header:hover { background: var(--light-gray); }
+
+  .section-num {
+    width: 24px; height: 24px;
+    background: var(--secondary);
+    color: white; border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .section-header h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px; font-weight: 700;
+    color: var(--text); flex: 1; letter-spacing: -0.01em;
+  }
+  .badge-req {
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    background: var(--primary-pale); color: var(--primary-dark);
+    padding: 2px 7px; border-radius: 10px; border: 1px solid rgba(255,107,53,0.2);
+  }
+  .badge-opt {
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    background: var(--success-pale); color: #065F46;
+    padding: 2px 7px; border-radius: 10px; border: 1px solid rgba(16,185,129,0.2);
+  }
+  .chevron { transition: transform 0.2s; color: var(--text-secondary); }
+  .chevron svg { width: 15px; height: 15px; }
+  .section-card.collapsed .chevron { transform: rotate(-90deg); }
+  .section-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+  .section-card.collapsed .section-body { display: none; }
+
+  .field-group { display: flex; flex-direction: column; gap: 5px; }
+  .field-group label {
+    font-size: 12.5px; font-weight: 700; color: var(--text);
+    display: flex; align-items: center; gap: 4px; letter-spacing: 0.01em;
+  }
+  .field-group label .req { color: var(--red); }
+  .field-hint { font-size: 11.5px; color: var(--text-secondary); margin-top: 1px; line-height: 1.5; }
+
+  input[type="text"], input[type="email"], input[type="date"], textarea {
+    width: 100%; padding: 9px 13px;
+    border: 1.5px solid var(--border); border-radius: 8px;
+    font-family: 'Manrope', sans-serif; font-size: 13.5px;
+    color: var(--text); background: var(--off-white);
+    transition: border-color 0.2s, box-shadow 0.2s; outline: none; resize: vertical;
+  }
+  input:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
+    background: white;
+  }
+  input::placeholder, textarea::placeholder { color: #B8C0CC; font-size: 13px; font-style: italic; }
+  textarea { min-height: 88px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .check-row { display: flex; align-items: center; gap: 9px; cursor: pointer; }
+  .check-row input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; }
+  .check-row span { font-size: 13px; color: var(--text); font-weight: 500; }
+
+  .generate-wrap {
+    padding-top: 16px;
+    background: linear-gradient(to top, var(--light-gray) 80%, transparent);
+    position: sticky; bottom: 0;
+  }
+  .btn-generate {
+    width: 100%; padding: 14px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white; border: none; border-radius: 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 9px;
+    transition: opacity 0.2s, transform 0.1s;
+    box-shadow: 0 4px 14px rgba(255,107,53,0.4);
+    letter-spacing: -0.01em;
+  }
+  .btn-generate:hover { opacity: 0.9; }
+  .btn-generate:active { transform: scale(0.99); }
+  .btn-generate svg { width: 17px; height: 17px; }
+
+  /* ── PREVIEW PANEL ── */
+  .preview-panel { display: flex; flex-direction: column; }
+  .preview-toolbar {
+    background: white; border: 1px solid var(--border); border-radius: 12px 12px 0 0;
+    padding: 11px 18px; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px; border-bottom: none;
+  }
+  .preview-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .preview-label .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); display: inline-block; }
+  .preview-actions { display: flex; gap: 8px; }
+  .btn-action {
+    padding: 7px 14px; border-radius: 7px;
+    font-family: 'Manrope', sans-serif; font-size: 12.5px; font-weight: 700;
+    cursor: pointer; border: 1.5px solid var(--border);
+    background: white; color: var(--text);
+    display: flex; align-items: center; gap: 6px; transition: all 0.15s;
+  }
+  .btn-action:hover { background: var(--light-gray); border-color: #CBD5E1; }
+  .btn-action.primary { background: var(--secondary); color: white; border-color: var(--secondary); }
+  .btn-action.primary:hover { background: var(--secondary-lt); border-color: var(--secondary-lt); }
+  .btn-action svg { width: 13px; height: 13px; }
+
+  .preview-box {
+    background: white; border: 1px solid var(--border);
+    border-radius: 0 0 12px 12px; padding: 40px 48px;
+    min-height: 600px; font-size: 14px; line-height: 1.75; color: var(--text);
+  }
+  .preview-empty {
+    height: 480px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px; color: var(--text-secondary);
+  }
+  .preview-empty-icon {
+    width: 64px; height: 64px; background: var(--primary-pale);
+    border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 4px;
+  }
+  .preview-empty-icon svg { width: 30px; height: 30px; color: var(--primary); }
+  .preview-empty h4 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: #94A3B8; }
+  .preview-empty p { font-size: 13px; text-align: center; max-width: 280px; color: #B0BAC9; }
+
+  /* ── POLICY DOCUMENT ── */
+  #policy-output { display: none; }
+
+  #policy-output .policy-logo-row {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px; padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+  }
+  #policy-output .policy-logo-row img { max-height: 48px; max-width: 180px; object-fit: contain; }
+  #policy-output .policy-logo-fallback { display: flex; align-items: center; gap: 10px; }
+  #policy-output .logo-box {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: white;
+  }
+  #policy-output .logo-text {
+    font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 700;
+    color: var(--secondary); letter-spacing: -0.03em;
+  }
+
+  #policy-output h1 {
+    font-family: 'DM Sans', sans-serif; font-size: 26px; font-weight: 700;
+    color: var(--secondary); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2;
+  }
+  #policy-output .policy-meta {
+    font-size: 12.5px; color: var(--text-secondary); margin-bottom: 22px;
+    display: flex; gap: 18px; flex-wrap: wrap; padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  #policy-output .policy-meta span { display: flex; align-items: center; gap: 5px; font-weight: 600; }
+  #policy-output .policy-notice {
+    background: var(--accent-pale); border-left: 3px solid var(--accent);
+    padding: 13px 16px; border-radius: 0 8px 8px 0;
+    font-size: 13px; color: #0C4A6E; margin-bottom: 28px; line-height: 1.65; font-weight: 500;
+  }
+  #policy-output h2 {
+    font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 700;
+    color: var(--secondary); margin: 28px 0 9px; letter-spacing: -0.02em;
+    padding-bottom: 7px; border-bottom: 1.5px solid var(--border);
+  }
+  #policy-output h3 {
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+    color: var(--text); margin: 16px 0 6px;
+  }
+  #policy-output p { margin-bottom: 11px; color: var(--text); line-height: 1.72; }
+  #policy-output ul { margin: 7px 0 13px 20px; color: var(--text); }
+  #policy-output ul li { margin-bottom: 5px; }
+  #policy-output .dpdp-ref {
+    display: inline;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    background: var(--tag-bg); color: var(--tag-col);
+    padding: 2px 6px; border-radius: 4px; font-weight: 500;
+    margin-left: 5px; vertical-align: middle;
+    border: 1px solid rgba(255,107,53,0.18);
+  }
+
+  /* ── LEGAL FOOTER BLOCK ── */
+  #policy-output .policy-legal-footer {
+    margin-top: 44px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Warning disclaimer */
+  #policy-output .legal-disclaimer-box {
+    background: #FFFBF0;
+    border-left: 4px solid #D97706;
+    padding: 18px 22px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  #policy-output .warn-icon { font-size: 22px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  #policy-output .legal-disclaimer-box h4 {
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+    color: #92400E; margin-bottom: 7px;
+  }
+  #policy-output .legal-disclaimer-box p {
+    font-size: 12.5px; color: #78350F; margin-bottom: 0; line-height: 1.65; font-weight: 500;
+  }
+
+  /* What to do next */
+  #policy-output .legal-next-steps {
+    background: var(--secondary-lt);
+    padding: 16px 22px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  #policy-output .legal-next-steps p {
+    font-size: 13px; color: white; font-weight: 600; margin-bottom: 10px;
+  }
+  #policy-output .next-step-list {
+    list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px;
+  }
+  #policy-output .next-step-list li {
+    font-size: 12.5px; color: rgba(255,255,255,0.8);
+    display: flex; gap: 8px; align-items: flex-start; margin-bottom: 0;
+  }
+  #policy-output .next-step-list li .step-num {
+    width: 18px; height: 18px;
+    background: var(--primary); color: white;
+    border-radius: 4px; font-size: 10px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* Backlinks */
+  #policy-output .policy-backlinks { padding: 18px 22px; border-top: 1px solid var(--border); background: var(--off-white); }
+  #policy-output .policy-backlinks > p { font-size: 12.5px; color: var(--text-secondary); margin-bottom: 10px; font-weight: 700; }
+  #policy-output .backlink-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+  #policy-output .backlink-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: white; border: 1.5px solid var(--primary); color: var(--primary-dark);
+    font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 20px;
+    text-decoration: none; transition: all 0.15s;
+    font-family: 'Manrope', sans-serif;
+  }
+  #policy-output .backlink-pill:hover { background: var(--primary); color: white; }
+  #policy-output .backlink-pill svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+  /* Generated-by */
+  #policy-output .policy-generated-by {
+    background: white; border-top: 1px solid var(--border);
+    padding: 12px 22px; display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    font-size: 11.5px; color: #9CA3AF;
+  }
+  #policy-output .policy-generated-by a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+  #policy-output .policy-generated-by a:hover { color: var(--primary); }
+  #policy-output .guardata-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--secondary); color: white;
+    font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 6px;
+    text-decoration: none; transition: background 0.2s;
+    font-family: 'Manrope', sans-serif;
+  }
+  #policy-output .guardata-badge:hover { background: var(--primary); }
+
+  /* Toast */
+  .copied-toast {
+    position: fixed; bottom: 30px; left: 50%;
+    transform: translateX(-50%) translateY(60px);
+    background: var(--secondary); color: white;
+    padding: 11px 22px; border-radius: 40px;
+    font-size: 13.5px; font-weight: 700; z-index: 999;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    pointer-events: none; border: 2px solid var(--primary);
+  }
+  .copied-toast.show { transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 1100px) {
+    .main { grid-template-columns: 1fr; }
+    .form-panel { position: static; max-height: none; }
+  }
+  @media (max-width: 640px) {
+    .topbar { padding: 12px 16px; }
+    .hero { padding: 32px 20px; }
+    .main { padding: 20px 16px 60px; }
+    .preview-box { padding: 24px 18px; }
+    .two-col { grid-template-columns: 1fr; }
+    .topbar-links .nav-hide { display: none; }
+  }
+</style>
+</head>
+<body>
+
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span> Free Tool &nbsp;·&nbsp; No Sign-up Required</div>
+    <h1>DPDP Privacy Policy <em>Generator</em><br>for Businesses</h1>
+    <p>This tool provides a general template based on the DPDP Act, 2023. It does not constitute legal advice. we strongly recommend having a qualified legal professional review your final policy before publishing.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+             </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="main">
+
+  <!-- FORM PANEL -->
+  <div class="form-panel">
+
+   
+    <!-- 1 -->
+    <div class="section-card" id="card-1">
+      <div class="section-header" onclick="toggleCard('card-1')">
+        <div class="section-num">1</div>
+        <h3>Your Business Information</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Company / Business Name <span class="req">*</span></label>
+          <input type="text" id="co_name" placeholder="e.g. Acme Technologies Pvt. Ltd.">
+        </div>
+        <div class="two-col">
+          <div class="field-group">
+            <label>Website URL <span class="req">*</span></label>
+            <input type="text" id="co_url" placeholder="e.g. www.acme.in">
+          </div>
+          <div class="field-group">
+            <label>App Name (if any)</label>
+            <input type="text" id="app_name" placeholder="e.g. Acme App">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Registered Address <span class="req">*</span></label>
+          <input type="text" id="co_address" placeholder="e.g. 42, MG Road, Bengaluru, Karnataka – 560001">
+        </div>
+        <div class="two-col">
+          <div class="field-group">
+            <label>Business Type <span class="req">*</span></label>
+            <input type="text" id="biz_type" placeholder="e.g. E-commerce, SaaS, EdTech, Fintech">
+          </div>
+          <div class="field-group">
+            <label>Effective Date <span class="req">*</span></label>
+            <input type="date" id="eff_date">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>What does your business do?</label>
+          <input type="text" id="biz_desc" placeholder="e.g. Online marketplace for handmade crafts across India">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="section-card" id="card-2">
+      <div class="section-header" onclick="toggleCard('card-2')">
+        <div class="section-num">2</div>
+        <h3>Personal Data You Collect</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Types of personal data collected <span class="req">*</span></label>
+          <div class="field-hint">One item per line or comma-separated</div>
+          <textarea id="data_types" placeholder="e.g.
+Full name
+Email address
+Mobile number
+Shipping / billing address
+Payment information (card / UPI / net banking)
+Device ID and IP address
+Purchase history and order details
+Profile photo (optional, user-uploaded)"></textarea>
+        </div>
+        <div class="field-group">
+          <label>Sensitive personal data (if any)</label>
+          <div class="field-hint">Financial, health, biometric, Aadhaar, etc. Leave blank if none.</div>
+          <textarea id="sensitive_data" placeholder="e.g.
+Bank account / UPI details (for payment processing)
+Health records (for healthcare or insurance apps)
+Aadhaar number (only if collected for KYC purposes)
+Biometric data (fingerprint / facial recognition)"></textarea>
+        </div>
+        <div class="field-group">
+          <label>How is the data collected?</label>
+          <div class="field-hint">List all collection touchpoints.</div>
+          <textarea id="how_collected" placeholder="e.g.
+Registration and login forms on website / app
+Checkout and payment forms
+Contact us and support ticket forms
+Cookies, pixels, and web analytics (Google Analytics)
+Mobile app permissions (location, camera, contacts)
+WhatsApp Business or email communications"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section-card" id="card-3">
+      <div class="section-header" onclick="toggleCard('card-3')">
+        <div class="section-num">3</div>
+        <h3>Purpose of Data Processing</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Why do you collect and use this data? <span class="req">*</span></label>
+          <div class="field-hint">DPDP requires a specific, stated purpose for every data type you collect.</div>
+          <textarea id="purposes" placeholder="e.g.
+To create and manage user accounts
+To process orders and facilitate payments
+To deliver products and send shipping updates via SMS / email
+To send order confirmations, receipts, and invoices
+To provide customer support and resolve disputes
+To send promotional offers and newsletters (with explicit consent)
+To comply with GST, income tax, and other legal obligations
+To detect and prevent fraud and ensure platform security
+To analyse and improve website / app performance"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="section-card" id="card-4">
+      <div class="section-header" onclick="toggleCard('card-4')">
+        <div class="section-num">4</div>
+        <h3>Data Retention & Deletion</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Retention periods for each data type <span class="req">*</span></label>
+          <div class="field-hint">Under DPDP §8(7), data must be deleted once the purpose is fulfilled.</div>
+          <textarea id="retention" placeholder="e.g.
+Account data: Duration of account + 90 days after deletion request
+Transaction records: 7 years (as required under the GST Act, 2017)
+Support ticket history: 3 years from resolution date
+Marketing preferences / consent logs: Until consent is withdrawn
+Server and access logs: 30 days rolling basis
+KYC documents: As required by applicable RBI / SEBI regulations"></textarea>
+        </div>
+        <div class="field-group">
+          <label>How can users request deletion?</label>
+          <input type="text" id="deletion_process" placeholder="e.g. Via account settings → 'Delete Account', or by emailing privacy@acme.in">
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section-card" id="card-5">
+      <div class="section-header" onclick="toggleCard('card-5')">
+        <div class="section-num">5</div>
+        <h3>Data Sharing & Third Parties</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Who do you share data with? <span class="req">*</span></label>
+          <div class="field-hint">List all third-party processors, partners, and service providers.</div>
+          <textarea id="third_parties" placeholder="e.g.
+Payment processors: Razorpay, PayU (for transaction processing)
+Logistics partners: Shiprocket, Delhivery (for order fulfilment)
+Cloud infrastructure: AWS / Google Cloud (for data storage and hosting)
+Analytics: Google Analytics, Mixpanel (for usage analytics)
+Email & SMS: SendGrid, MSG91 (for transactional communications)
+Customer support: Freshdesk / Zendesk (for support ticket management)
+Government authorities: As mandated by applicable Indian law"></textarea>
+        </div>
+        <div class="field-group">
+          <label>Do you sell or commercially share personal data?</label>
+          <div class="check-row" style="margin-top:4px">
+            <input type="checkbox" id="sells_data">
+            <span>Yes, we share data for commercial purposes (describe below)</span>
+          </div>
+          <textarea id="sells_data_detail" style="margin-top:8px;min-height:60px;" placeholder="e.g. We share anonymised behavioural data with advertising partners for campaign targeting. We never share personally identifiable information without your explicit consent."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="section-card" id="card-6">
+      <div class="section-header" onclick="toggleCard('card-6')">
+        <div class="section-num">6</div>
+        <h3>Security Measures</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Security measures in place <span class="req">*</span></label>
+          <div class="field-hint">DPDP §8 requires "reasonable security safeguards" to prevent breaches.</div>
+          <textarea id="security" placeholder="e.g.
+SSL / TLS encryption for all data in transit (HTTPS enforced)
+AES-256 encryption for sensitive data at rest
+Role-based access control (RBAC) for all internal systems
+Regular security audits and annual penetration testing
+Two-factor authentication (2FA) for admin and staff accounts
+Payment data handled exclusively via PCI-DSS compliant gateways
+Anonymisation applied to analytics and reporting data
+Employee confidentiality agreements (NDAs) and security training
+Documented incident response plan with 72-hour breach notification"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="section-card" id="card-7">
+      <div class="section-header" onclick="toggleCard('card-7')">
+        <div class="section-num">7</div>
+        <h3>Cookies & Tracking</h3>
+        <span class="badge-opt">Optional</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="check-row">
+          <input type="checkbox" id="uses_cookies" checked>
+          <span>We use cookies and / or other tracking technologies</span>
+        </div>
+        <div class="field-group">
+          <label>Types of cookies used</label>
+          <textarea id="cookie_types" placeholder="e.g.
+Essential cookies: Required for login sessions and shopping cart functionality
+Analytics cookies: Google Analytics to understand user behaviour and improve UX
+Marketing / retargeting cookies: Facebook Pixel, Google Ads for ad campaigns
+Preference cookies: To remember language, currency, or display preferences"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="section-card" id="card-8">
+      <div class="section-header" onclick="toggleCard('card-8')">
+        <div class="section-num">8</div>
+        <h3>Children's Data</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="check-row">
+          <input type="checkbox" id="processes_children">
+          <span>Our platform is used by or processes data of minors (under 18)</span>
+        </div>
+        <div class="field-group">
+          <label>Describe your parental consent mechanism</label>
+          <div class="field-hint">DPDP requires verifiable parental consent before processing children's data.</div>
+          <textarea id="children_consent" placeholder="e.g.
+We require a parent or legal guardian to provide verifiable consent before any user under 18 can register or use our platform. Consent is obtained via a parent-verified email link and OTP. We do not serve targeted advertising to minors, and we do not track or profile their behaviour for commercial purposes."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="section-card" id="card-9">
+      <div class="section-header" onclick="toggleCard('card-9')">
+        <div class="section-num">9</div>
+        <h3>Cross-Border Data Transfers</h3>
+        <span class="badge-opt">Optional</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="check-row">
+          <input type="checkbox" id="cross_border">
+          <span>We transfer or store data outside India</span>
+        </div>
+        <div class="field-group">
+          <label>Countries / regions involved</label>
+          <input type="text" id="transfer_countries" placeholder="e.g. United States (AWS us-east-1), Singapore (GCP), European Union (Stripe)">
+        </div>
+        <div class="field-group">
+          <label>Safeguards in place</label>
+          <input type="text" id="transfer_safeguards" placeholder="e.g. Standard Contractual Clauses (SCCs); adequacy notifications under DPDP Rules 2025">
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="section-card" id="card-10">
+      <div class="section-header" onclick="toggleCard('card-10')">
+        <div class="section-num">10</div>
+        <h3>Grievance Officer Details</h3>
+        <span class="badge-req">Required</span>
+        <div class="chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></div>
+      </div>
+      <div class="section-body">
+        <div class="field-hint">DPDP §13 requires a designated Grievance Officer to handle user complaints about data processing.</div>
+        <div class="two-col">
+          <div class="field-group">
+            <label>Grievance Officer Name <span class="req">*</span></label>
+            <input type="text" id="go_name" placeholder="e.g. Priya Sharma">
+          </div>
+          <div class="field-group">
+            <label>Designation</label>
+            <input type="text" id="go_designation" placeholder="e.g. Chief Privacy Officer">
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field-group">
+            <label>Grievance Email <span class="req">*</span></label>
+            <input type="email" id="go_email" placeholder="e.g. grievance@acme.in">
+          </div>
+          <div class="field-group">
+            <label>Phone / WhatsApp</label>
+            <input type="text" id="go_phone" placeholder="e.g. +91 98765 43210">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Office Address (if different from registered)</label>
+          <input type="text" id="go_address" placeholder="e.g. Same as registered address above">
+        </div>
+        <div class="field-group">
+          <label>Response time commitment</label>
+          <input type="text" id="go_response" placeholder="e.g. All grievances acknowledged within 48 hours and resolved within 30 days">
+        </div>
+      </div>
+    </div>
+
+    <div class="generate-wrap">
+      <button class="btn-generate" onclick="generatePolicy()">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+        Generate DPDP Privacy Policy
+      </button>
+    </div>
+  </div>
+
+  <!-- PREVIEW PANEL -->
+  <div class="preview-panel">
+    <div class="preview-toolbar">
+      <div class="preview-label">
+        <span class="dot"></span>
+        Live Policy Preview
+      </div>
+      <div class="preview-actions">
+        <button class="btn-action" onclick="copyPolicy()">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M10 1.5H6a.5.5 0 00-.5.5v1H4a1 1 0 00-1 1v9a1 1 0 001 1h8a1 1 0 001-1V4a1 1 0 00-1-1h-1.5V2a.5.5 0 00-.5-.5zm-4 1H6V2h4v.5h-4zm5 2v8H5V4h6z"/></svg>
+          Copy Text
+        </button>
+        <button class="btn-action primary" onclick="downloadPolicy()">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l-4-4h2.5V4h3v4H12L8 12zm-5 2h10v1.5H3V14z"/></svg>
+          Download .txt
+        </button>
+      </div>
+    </div>
+    <div class="preview-box">
+      <div class="preview-empty" id="empty-state">
+        <div class="preview-empty-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="5" y="3" width="22" height="26" rx="3"/>
+            <path d="M10 10h12M10 15h12M10 20h8"/>
+          </svg>
+        </div>
+        <h4>Your policy will appear here</h4>
+        <p>Fill in your business details on the left and click <strong>Generate</strong> to create your DPDP-compliant privacy policy.</p>
+      </div>
+      <div id="policy-output"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="copied-toast" id="toast">✓ Copied to clipboard</div>
+
+<script>
+  document.getElementById('eff_date').value = new Date().toISOString().split('T')[0];
+
+  // Logo upload
+  const logoInput = document.getElementById('logo-file-input');
+  const logoImg   = document.getElementById('logo-img');
+  const logoPh    = document.getElementById('logo-ph');
+  let   logoDataURL = null;
+
+  logoInput.addEventListener('change', function() {
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      logoDataURL = e.target.result;
+      logoImg.src = logoDataURL;
+      logoImg.style.display = 'block';
+      logoPh.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  });
+
+  function toggleCard(id) {
+    document.getElementById(id).classList.toggle('collapsed');
+  }
+
+  const val  = id => { const e = document.getElementById(id); return e ? e.value.trim() : ''; };
+  const chk  = id => { const e = document.getElementById(id); return e ? e.checked : false; };
+  const list = raw => raw ? raw.split(/\n|,(?!\s*\d)/).map(s=>s.trim()).filter(Boolean) : [];
+  const date = d  => {
+    if (!d) return new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+    return new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+  };
+
+  function generatePolicy() {
+    const coName  = val('co_name')  || '[Company Name]';
+    const coUrl   = val('co_url')   || '[Website URL]';
+    const appName = val('app_name');
+    const coAddr  = val('co_address') || '[Registered Address]';
+    const bizType = val('biz_type')   || 'online business';
+    const bizDesc = val('biz_desc');
+    const effDate = date(val('eff_date'));
+
+    const dataTypes    = list(val('data_types'));
+    const sensitiveD   = list(val('sensitive_data'));
+    const howColl      = list(val('how_collected'));
+    const purposes     = list(val('purposes'));
+    const retention    = val('retention');
+    const delProc      = val('deletion_process');
+    const thirdParties = list(val('third_parties'));
+    const sellsData    = chk('sells_data');
+    const sellsDetail  = val('sells_data_detail');
+    const security     = list(val('security'));
+    const usesCookies  = chk('uses_cookies');
+    const cookieTypes  = list(val('cookie_types'));
+    const kidsYes      = chk('processes_children');
+    const kidsConsent  = val('children_consent');
+    const xbYes        = chk('cross_border');
+    const xbCo         = val('transfer_countries');
+    const xbSafe       = val('transfer_safeguards');
+    const goName       = val('go_name')        || '[Grievance Officer Name]';
+    const goDesig      = val('go_designation') || 'Grievance Officer';
+    const goEmail      = val('go_email')       || '[grievance@company.in]';
+    const goPhone      = val('go_phone');
+    const goAddress    = val('go_address');
+    const goResp       = val('go_response') || 'We acknowledge all grievances within 48 hours and resolve them within 30 days';
+
+    const platform = appName
+      ? `website (${coUrl}) and mobile application (${appName})`
+      : `website (${coUrl})`;
+
+    let h = '';
+    const ul = items => `<ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
+
+    // Logo
+    h += `<div class="policy-logo-row">`;
+    if (logoDataURL) {
+      h += `<img src="${logoDataURL}" alt="${coName} Logo">`;
+    } else {
+      const init = coName.charAt(0).toUpperCase();
+      h += `<div class="policy-logo-fallback"><div class="logo-box">${init}</div><span class="logo-text">${coName}</span></div>`;
+    }
+    h += `</div>`;
+
+    h += `<h1>Privacy Policy — ${coName}</h1>`;
+    h += `<div class="policy-meta"><span>📅 Effective: <strong>${effDate}</strong></span><span>🌐 <strong>${coUrl}</strong></span><span>📋 DPDP Act, 2023 Compliant</span></div>`;
+
+    h += `<div class="policy-notice">This Privacy Policy is prepared in compliance with the <strong>Digital Personal Data Protection Act, 2023</strong> (DPDP Act) and the DPDP Rules, 2025, notified by the Government of India on November 13, 2025. It governs how ${coName} collects, processes, stores, and uses your personal data. By using our ${platform}, you — as a <strong>Data Principal</strong> — acknowledge this Policy and consent to the practices described herein.</div>`;
+
+    // §1 About Us
+    h += `<h2>1. About Us <span class="dpdp-ref">DPDP §4</span></h2>`;
+    h += `<p><strong>${coName}</strong> is a ${bizType}${bizDesc?` — ${bizDesc}`:''}. We operate our ${platform} and act as the <strong>Data Fiduciary</strong> as defined under Section 2(i) of the DPDP Act, 2023, responsible for determining the purposes and means of processing your personal data.</p>`;
+    h += `<p><strong>Registered Office:</strong> ${coAddr}</p>`;
+
+    // §2 Scope
+    h += `<h2>2. Scope &amp; Applicability <span class="dpdp-ref">DPDP §3</span></h2>`;
+    h += `<p>This Privacy Policy applies to all digital personal data processed by ${coName} in connection with our ${platform} and associated services. It covers all individuals (Data Principals) in India whose personal data we collect or process, including customers, visitors, users, and persons whose data we receive in the course of business.</p>`;
+    h += `<p>This Policy does not apply to processing of non-digital data, data processed for purely personal or domestic purposes, or publicly available data, as exempted under the DPDP Act.</p>`;
+
+    // §3 Data Collected
+    h += `<h2>3. Personal Data We Collect <span class="dpdp-ref">DPDP §4</span></h2>`;
+    h += `<p>We collect only such personal data as is necessary for the specific, stated purposes described in this Policy. We do not collect data beyond what is required for the delivery of our services.</p>`;
+    if (dataTypes.length) { h += `<h3>3.1 Personal Data</h3>${ul(dataTypes)}`; }
+    if (sensitiveD.length) {
+      h += `<h3>3.2 Sensitive Personal Data</h3>`;
+      h += `<p>We may process the following categories of sensitive personal data, strictly subject to your explicit consent and only to the extent necessary for the stated purpose:</p>${ul(sensitiveD)}`;
+    }
+    if (howColl.length) {
+      h += `<h3>3.3 How We Collect Data</h3><p>We collect personal data through the following channels:</p>${ul(howColl)}`;
+    }
+
+    // §4 Purpose
+    h += `<h2>4. Lawful Purpose &amp; Basis of Processing <span class="dpdp-ref">DPDP §4–7</span></h2>`;
+    h += `<p>Under the DPDP Act, we may process your personal data only for lawful purposes for which you have given us your <strong>free, specific, informed, and unambiguous consent</strong> (Section 6), or where processing is necessary for a <strong>legitimate use</strong> as defined under Section 7. We process your personal data for the following specific purposes:</p>`;
+    if (purposes.length) h += ul(purposes);
+    h += `<p>We will not process your personal data for any purpose not listed above without seeking fresh consent or as otherwise expressly permitted by applicable law. You may withdraw your consent at any time; we will cease processing for the relevant purpose promptly upon receiving your withdrawal.</p>`;
+
+    // §5 Retention
+    h += `<h2>5. Data Retention &amp; Deletion <span class="dpdp-ref">DPDP §8(7)</span></h2>`;
+    h += `<p>In compliance with Section 8(7) of the DPDP Act, ${coName} retains personal data only for as long as the purpose for which it was collected continues to be served, or as required by applicable law. Once the purpose is fulfilled, data is erased or anonymised in accordance with the following schedule:</p>`;
+    if (retention) { const lines = retention.split('\n').filter(Boolean); h += ul(lines); }
+    if (delProc) h += `<p><strong>Requesting Deletion:</strong> ${delProc}</p>`;
+    h += `<p>Certain data may be retained for longer periods where required under Indian law (e.g., financial records under the GST Act, 2017, or as mandated by regulatory authorities), or to resolve disputes and enforce our agreements.</p>`;
+
+    // §6 Sharing
+    h += `<h2>6. Data Sharing &amp; Third-Party Processors <span class="dpdp-ref">DPDP §8</span></h2>`;
+    h += `<p>We may share your personal data with trusted third-party service providers acting as <strong>Data Processors</strong> on our behalf. All processors are bound by data processing agreements that mandate protection standards consistent with the DPDP Act. We share only the minimum data necessary for the stated purpose.</p>`;
+    if (thirdParties.length) h += ul(thirdParties);
+    if (sellsData && sellsDetail) {
+      h += `<p><strong>Commercial Data Sharing:</strong> ${sellsDetail}</p>`;
+    } else {
+      h += `<p>We do <strong>not</strong> sell, rent, or trade your personally identifiable information to third parties for their own independent commercial purposes.</p>`;
+    }
+    h += `<p>We may also disclose personal data to government authorities, law enforcement, or regulatory bodies when required by law, court order, or to protect the safety, rights, or property of ${coName} or its users.</p>`;
+
+    // §7 Rights
+    h += `<h2>7. Your Rights as a Data Principal <span class="dpdp-ref">DPDP §11–14</span></h2>`;
+    h += `<p>The DPDP Act grants you the following rights as a Data Principal. To exercise any right, please contact our Grievance Officer (Section 11 below).</p>`;
+    h += `<h3>7.1 Right to Access Information <span class="dpdp-ref">§11</span></h3><p>You have the right to obtain a summary of personal data we hold about you, the purposes of processing, details of all Data Processors involved, and any other prescribed information.</p>`;
+    h += `<h3>7.2 Right to Correction &amp; Updating <span class="dpdp-ref">§12</span></h3><p>You may request correction of inaccurate, incomplete, or misleading personal data, as well as supplementation of incomplete data.</p>`;
+    h += `<h3>7.3 Right to Erasure <span class="dpdp-ref">§12</span></h3><p>You may request erasure of your personal data where the purpose of collection is no longer served, you have withdrawn consent, or as required by applicable law. We process valid erasure requests within prescribed timelines.</p>`;
+    h += `<h3>7.4 Right to Withdraw Consent <span class="dpdp-ref">§7</span></h3><p>Where processing is based on your consent, you may withdraw it at any time. Withdrawal does not affect the lawfulness of processing carried out prior to withdrawal. We will cease processing for the relevant purpose promptly upon receipt of your withdrawal.</p>`;
+    h += `<h3>7.5 Right to Nominate <span class="dpdp-ref">§14</span></h3><p>You may nominate another individual to exercise your data rights on your behalf in the event of your death or incapacity, as provided under Section 14 of the DPDP Act.</p>`;
+    h += `<h3>7.6 Right to Grievance Redressal <span class="dpdp-ref">§13</span></h3><p>You have the right to have grievances relating to processing of your personal data addressed by our Grievance Officer. If dissatisfied with our response, you may escalate your complaint to the <strong>Data Protection Board of India (DPBI)</strong> under Section 18 of the DPDP Act.</p>`;
+
+    // §8 Security
+    h += `<h2>8. Data Security &amp; Breach Notification <span class="dpdp-ref">DPDP §8</span></h2>`;
+    h += `<p>${coName} implements appropriate technical and organisational measures to protect your personal data against unauthorised access, accidental loss, destruction, alteration, or disclosure, as required under Section 8(5) of the DPDP Act.</p>`;
+    if (security.length) { h += `<p>Our security measures include:</p>${ul(security)}`; }
+    h += `<p><strong>Breach Notification:</strong> In the event of a personal data breach likely to result in harm to affected Data Principals, ${coName} will notify the <strong>Data Protection Board of India</strong> within <strong>72 hours</strong> of becoming aware, as required under Section 8(6) of the DPDP Act, and will notify affected individuals as mandated.</p>`;
+
+    // §9 Cookies (conditional)
+    let sNum = 9;
+    if (usesCookies) {
+      h += `<h2>${sNum}. Cookies &amp; Tracking Technologies</h2>`;
+      h += `<p>Our ${platform} uses cookies and similar technologies (web beacons, pixels, local storage) to enhance functionality, analyse usage patterns, and support marketing activities.</p>`;
+      if (cookieTypes.length) h += ul(cookieTypes);
+      h += `<p>You can manage or disable cookies via your browser settings. Disabling certain cookies may impact platform functionality. We obtain your consent before placing non-essential cookies, in accordance with applicable law.</p>`;
+      sNum++;
+    }
+
+    // Children
+    h += `<h2>${sNum}. Children's Personal Data <span class="dpdp-ref">DPDP §9</span></h2>`;
+    if (kidsYes && kidsConsent) {
+      h += `<p>Our services may be used by or involve the processing of data of individuals under 18. In compliance with Section 9 of the DPDP Act, we require <strong>verifiable parental or guardian consent</strong> prior to processing any personal data of a child.</p><p>${kidsConsent}</p>`;
+      h += `<p>We do not conduct behavioural tracking or serve targeted advertising to children. Children's data is processed only for the limited purposes stated herein, with the explicit, verifiable consent of a parent or legal guardian.</p>`;
+    } else {
+      h += `<p>Our services are not directed at or designed for children under 18. We do not knowingly collect personal data from minors. Should we become aware of inadvertent collection from a child without verifiable parental consent under Section 9 of the DPDP Act, we will take immediate steps to delete such data. If you believe we have collected a child's data without proper consent, please contact our Grievance Officer immediately.</p>`;
+    }
+    sNum++;
+
+    // Cross-border
+    h += `<h2>${sNum}. Cross-Border Data Transfers <span class="dpdp-ref">DPDP §16</span></h2>`;
+    if (xbYes && xbCo) {
+      h += `<p>${coName} may transfer or store your personal data outside India in connection with our use of international service providers. Such transfers are made only to countries notified by the Government of India as permissible, or subject to appropriate contractual and technical safeguards.</p>`;
+      h += `<p><strong>Transfer destinations:</strong> ${xbCo}</p>`;
+      if (xbSafe) h += `<p><strong>Safeguards in place:</strong> ${xbSafe}</p>`;
+    } else {
+      h += `<p>${coName} primarily stores and processes your personal data within India. To the extent any data is processed outside India by our third-party service providers, such transfers are made in compliance with Section 16 of the DPDP Act and applicable government notifications.</p>`;
+    }
+    sNum++;
+
+    // Consent & Updates
+    h += `<h2>${sNum}. Consent Management &amp; Policy Updates</h2>`;
+    h += `<p>We obtain your consent through a clear, affirmative action — such as ticking a checkbox or clicking "I Agree" — before collecting and processing your personal data. Our consent notices specify the data collected, the purposes of processing, your rights as a Data Principal, and how to contact our Grievance Officer.</p>`;
+    h += `<p>We may update this Privacy Policy periodically to reflect changes in our services, practices, or legal obligations. Material changes will be communicated by prominently posting the updated policy on our ${platform} and, where required, by seeking fresh consent. The <strong>Effective Date</strong> at the top indicates when this Policy was last updated.</p>`;
+    sNum++;
+
+    // Grievance Officer
+    h += `<h2>${sNum}. Grievance Officer &amp; Contact <span class="dpdp-ref">DPDP §13</span></h2>`;
+    h += `<p>In accordance with Section 13 of the DPDP Act, ${coName} has designated a Grievance Officer to address complaints, queries, and requests relating to this Privacy Policy and the processing of your personal data:</p>`;
+    h += `<p><strong>${goName}</strong><br>${goDesig}, ${coName}<br><strong>Email:</strong> ${goEmail}<br>`;
+    if (goPhone) h += `<strong>Phone / WhatsApp:</strong> ${goPhone}<br>`;
+    const resolvedAddr = (goAddress && goAddress.toLowerCase() !== 'same as registered address above') ? goAddress : coAddr;
+    h += `<strong>Address:</strong> ${resolvedAddr}</p>`;
+    h += `<p>${goResp}. If you are not satisfied with our resolution, you may escalate your complaint to the <strong>Data Protection Board of India (DPBI)</strong> at <strong>dpb.gov.in</strong>.</p>`;
+
+    // ── LEGAL FOOTER BLOCK ──
+    h += `<div class="policy-legal-footer">`;
+
+    // Disclaimer
+    h += `<div class="legal-disclaimer-box">
+      <div class="warn-icon">⚖️</div>
+      <div>
+        <h4>Legal Disclaimer — Important: Read Before Publishing</h4>
+        <p>This document is a <strong>starting template</strong> designed to help you structure a DPDP-compliant privacy policy. It does <strong>not</strong> constitute legal advice and does not create an attorney-client relationship. Privacy obligations vary significantly by industry, data type, business model, volume of data processed, and whether your business qualifies as a Significant Data Fiduciary under the DPDP Act. <strong>Guardata strongly recommends that you have this policy reviewed and finalised by a qualified legal professional or data protection counsel before publishing it on your website or app.</strong> Using this template without legal review does not guarantee compliance with the DPDP Act, 2023 or any other applicable law. Do not rely solely on this template as your compliance strategy — consult a lawyer familiar with the DPDP Act and your specific business context.</p>
+      </div>
+    </div>`;
+
+    // What to do next
+    h += `<div class="legal-next-steps">
+      <p>✅ Recommended next steps after generating this policy:</p>
+      <ul class="next-step-list">
+        <li><span class="step-num">1</span>Have a data protection lawyer review and customise this policy for your specific business</li>
+        <li><span class="step-num">2</span>Appoint a Grievance Officer and set up a dedicated grievance email / process</li>
+        <li><span class="step-num">3</span>Implement a consent management system for your website and app</li>
+        <li><span class="step-num">4</span>Document your data flows and map all processing activities</li>
+        <li><span class="step-num">5</span>Run a DPDP compliance audit using the <a href="https://app.guardata.in/" target="_blank" style="color:#93C5FD;font-weight:700;">Guardata Compliance Hub</a></li>
+      </ul>
+    </div>`;
+
+    // Backlinks
+    h += `<div class="policy-backlinks">`;
+    h += `<p>📚 Free DPDP Resources from Guardata:</p>`;
+    h += `<div class="backlink-row">`;
+    const links = [
+      ['https://guardata.in/blog/what-is-dpdp-act.html',         'What is the DPDP Act?'],
+      ['https://guardata.in/blog/dpdp-penalties.html',           'DPDP Penalties Guide'],
+      ['https://guardata.in/blog/dpdp-for-startups.html',        'DPDP for Startups'],
+      ['https://guardata.in/blog/dpdp-for-ecommerce.html',       'DPDP for E-commerce'],
+      ['https://guardata.in/blog/dpdp-social-commerce.html',     'DPDP for Social Commerce'],
+      ['https://guardata.in/blog/dpdp-marketplace-sellers.html', 'DPDP for Marketplace Sellers'],
+      ['https://guardata.in/blog/dpdp-edtech-tutors.html',       'DPDP for EdTech & Tutors'],
+      ['https://guardata.in/blog/',                              'All DPDP Articles →'],
+    ];
+    links.forEach(([url, label]) => {
+      h += `<a href="${url}" target="_blank" class="backlink-pill">
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 1h4v4M11 1L5 7M2 4H1a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V9"/></svg>
+        ${label}</a>`;
+    });
+    h += `</div>`;
+    h += `<p style="font-size:11.5px;color:#9CA3AF;margin-bottom:0;">Need full DPDP compliance — not just a policy? <a href="https://app.guardata.in/" target="_blank" style="color:var(--secondary);font-weight:700;">Try the Guardata Compliance Hub →</a></p>`;
+    h += `</div>`;
+
+    // Generated-by
+    h += `<div class="policy-generated-by">
+      <span>Generated using the <a href="https://guardata.in" target="_blank">Guardata</a> DPDP Privacy Policy Generator &nbsp;·&nbsp; ${effDate}</span>
+      <a href="https://guardata.in" target="_blank" class="guardata-badge">🛡️ guardata.in</a>
+    </div>`;
+
+    h += `</div>`; // policy-legal-footer
+
+    // Render
+    const out   = document.getElementById('policy-output');
+    const empty = document.getElementById('empty-state');
+    out.innerHTML = h;
+    out.style.display = 'block';
+    empty.style.display = 'none';
+    document.querySelector('.preview-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function getPolicyText() { return document.getElementById('policy-output').innerText || ''; }
+
+  function copyPolicy() {
+    const text = getPolicyText();
+    if (!text) { alert('Generate a policy first.'); return; }
+    navigator.clipboard.writeText(text).then(() => {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    });
+  }
+
+  function downloadPolicy() {
+    const text = getPolicyText();
+    if (!text) { alert('Generate a policy first.'); return; }
+    const name = (document.getElementById('co_name').value.trim() || 'company').replace(/\s+/g,'-').toLowerCase();
+    const blob = new Blob([text], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${name}-privacy-policy-dpdp.txt`;
+    a.click();
+  }
+</script>
+</body>
+</html>
 
