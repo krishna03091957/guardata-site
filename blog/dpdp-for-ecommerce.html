@@ -116,16 +116,33 @@
 html{scroll-behavior:smooth}
 body{font-family:'Manrope',sans-serif;font-size:15px;line-height:1.65;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
 #progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0%;z-index:1000}
-.topnav{position:sticky;top:0;z-index:100;background:#0F4C81;height:var(--nav-h);display:flex;align-items:center;padding:0 40px;gap:10px}
-.nav-logo{font-size:16px;font-weight:800;color:white;text-decoration:none;letter-spacing:-0.04em;flex-shrink:0}
-.nav-div{height:14px;width:1px;background:rgba(255,255,255,0.18)}
-.nav-trail{display:flex;align-items:center;gap:6px;flex:1;overflow:hidden;min-width:0}
-.nav-trail a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;white-space:nowrap}
-.nav-trail a:hover{color:rgba(255,255,255,0.9)}
-.nav-trail .sep{color:rgba(255,255,255,0.2);font-size:11px}
-.nav-trail .now{font-size:13px;color:rgba(255,255,255,0.7);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.nav-cta{margin-left:auto;flex-shrink:0;font-size:13px;font-weight:700;color:white;background:var(--orange);padding:7px 16px;border-radius:7px;text-decoration:none}
-.nav-cta:hover{background:var(--orange-dk)}
+/* ── SITE HEADER ── */
+.site-header{position:sticky;top:0;z-index:100;background:#ffffff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #E4E7EB;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:32px;max-width:1120px;margin:0 auto;padding:0 40px}
+.logo-link{display:flex;align-items:center;gap:10px;flex-shrink:0;transition:opacity 0.2s;text-decoration:none}
+.logo-link:hover{opacity:0.85}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-family:'Manrope',sans-serif;font-size:14px;font-weight:500;color:#64748B;padding:6px 12px;border-radius:6px;transition:color 0.2s,background 0.2s;text-decoration:none}
+.nav-links a:hover{color:#0F172A;background:#F5F7FA}
+.nav-links a.active{color:#0F4C81;font-weight:600}
+.nav-right{display:flex;align-items:center;gap:12px}
+.btn-nav-ghost{font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;color:#0F4C81;padding:8px 16px;border-radius:6px;border:1.5px solid #E4E7EB;background:transparent;cursor:pointer;transition:all 0.2s;text-decoration:none}
+.btn-nav-ghost:hover{border-color:#0F4C81;background:#0F4C81;color:white}
+.btn-nav-primary{font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;color:white;padding:8px 18px;border-radius:6px;border:none;background:#FF6B35;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 8px rgba(255,107,53,0.25);text-decoration:none;display:inline-block}
+.btn-nav-primary:hover{background:#E55A2B;box-shadow:0 4px 14px rgba(255,107,53,0.35);transform:translateY(-1px)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:2px;background:#0F172A;border-radius:2px;transition:all 0.3s}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:16px 20px 20px;border-top:1px solid #E4E7EB;background:white}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:15px;font-weight:500;color:#0F172A;padding:10px 12px;border-radius:6px;transition:background 0.2s;text-decoration:none}
+.mobile-menu a:hover{background:#F5F7FA}
+.mobile-menu .btn-nav-primary{margin-top:8px;text-align:center}
+@media(max-width:768px){
+  .nav{padding:0 20px}
+  .nav-links,.btn-nav-ghost{display:none}
+  .nav-toggle{display:flex}
+  .btn-nav-primary{display:none}
+}
 .article-hero{background:#0F4C81;padding:40px 0 36px;position:relative;overflow:hidden}
 .article-hero::before{content:'';position:absolute;top:-70px;right:-50px;width:320px;height:320px;border-radius:50%;background:rgba(0,180,216,0.18)}
 .article-hero::after{content:'';position:absolute;bottom:-80px;left:12%;width:220px;height:220px;border-radius:50%;background:rgba(255,107,53,0.1)}
@@ -223,16 +240,31 @@ tbody tr:hover td{background:var(--bg)}
 <body>
 <div id="progress"></div>
 
-<nav class="topnav">
-  <a href="https://guardata.in" class="nav-logo">Guardata</a>
-  <div class="nav-div"></div>
-  <div class="nav-trail">
+<header class="site-header" role="banner">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="https://guardata.in/" class="logo-link" aria-label="Guardata — Go to homepage">
+      <img src="https://guardata.in/logo.svg" alt="Guardata" height="58" width="auto" loading="eager">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="https://guardata.in/dpdp-act-india">DPDP Act</a></li>
+      <li><a href="https://guardata.in/tools">Free Tools</a></li>
+      <li><a href="https://guardata.in/blog" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://app.guardata.in/" class="btn-nav-ghost" target="_blank" rel="noopener">Coming Soon</a>
+      <a href="https://guardata.in/tools" class="btn-nav-primary">Free Toolkit</a>
+      <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="https://guardata.in/dpdp-act-india">DPDP Act</a>
+    <a href="https://guardata.in/tools">Free Tools</a>
     <a href="https://guardata.in/blog">Blog</a>
-    <span class="sep">›</span>
-    <span class="now">DPDP for E-commerce: Complete Compliance</span>
+    <a href="https://app.guardata.in/" class="btn-nav-primary" target="_blank" rel="noopener">Launch App →</a>
   </div>
-  <a href="https://app.guardata.in/" class="nav-cta">The Compliance Hub →</a>
-</nav>
+</header>
 
 <div class="article-hero">
   <div class="hero-inner">
@@ -700,6 +732,20 @@ window.addEventListener('scroll',()=>{const d=document.documentElement;bar.style
 const links=document.querySelectorAll('.toc-list a');
 [...links].map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean).forEach(s=>{
   new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const lnk=document.querySelector(`.toc-list a[href="#${e.target.id}"]`);if(lnk)lnk.classList.add('active')}})},{rootMargin:'-15% 0px -75% 0px'}).observe(s)
+});
+</script>
+  <script>
+function toggleMenu(btn){
+  const menu=document.getElementById('mobile-menu');
+  const isOpen=menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded',isOpen);
+}
+document.addEventListener('click',(e)=>{
+  const header=document.querySelector('.site-header');
+  if(header&&!header.contains(e.target)){
+    const m=document.getElementById('mobile-menu');
+    if(m)m.classList.remove('open');
+  }
 });
 </script>
 </body>
