@@ -1,0 +1,181 @@
+# ══════════════════════════════════════════════════
+# robots.txt — guardata.in
+# Updated: 2026-05-10
+#
+# PHILOSOPHY:
+# Allow all legitimate crawlers (Google, Bing, AI).
+# Block only internal/utility paths that should
+# never appear in search results.
+# Sitemap is declared at the bottom for every bot.
+# ══════════════════════════════════════════════════
+
+
+# ──────────────────────────────────────────────────
+# ALL CRAWLERS — default rules
+# ──────────────────────────────────────────────────
+User-agent: *
+
+# Allow everything except internal/utility paths
+Allow: /
+
+# Block admin, API internals, and draft content
+Disallow: /admin/
+Disallow: /admin
+Disallow: /api/
+Disallow: /api
+Disallow: /_next/
+Disallow: /cdn-cgi/
+Disallow: /.well-known/
+Disallow: /drafts/
+Disallow: /staging/
+Disallow: /test/
+Disallow: /tmp/
+
+# Block search result pages if you add site search
+# Disallow: /blog?q=
+# Disallow: /search
+
+# Block duplicate/parameter URLs (uncomment if relevant)
+# Disallow: /*?utm_
+# Disallow: /*?ref=
+# Disallow: /*?source=
+
+# Crawl delay — be polite to your server
+# Remove or reduce once you're on a proper host
+Crawl-delay: 2
+
+
+# ──────────────────────────────────────────────────
+# GOOGLE — no crawl delay needed, handles itself
+# ──────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /cdn-cgi/
+Disallow: /drafts/
+Disallow: /staging/
+Disallow: /tmp/
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /logo.svg
+Disallow: /
+
+
+# ──────────────────────────────────────────────────
+# BING / MICROSOFT
+# ──────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /cdn-cgi/
+Disallow: /drafts/
+Disallow: /staging/
+Disallow: /tmp/
+
+
+# ──────────────────────────────────────────────────
+# AI CRAWLERS — allow all (GEO / AIO strategy)
+# These power Perplexity, ChatGPT Browse, Gemini,
+# Claude, Bing Copilot citations. Blocking them
+# removes you from AI-generated answers entirely.
+# ──────────────────────────────────────────────────
+
+# OpenAI (ChatGPT Browse, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+# OpenAI training (block if you prefer not to be
+# used for model training — separate from Browse)
+# User-agent: GPTBot
+# Disallow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI (Llama)
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (feeds many AI models)
+User-agent: CCBot
+Allow: /
+
+# Apple (Applebot-Extended for AI features)
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Diffbot (AI data extraction)
+User-agent: Diffbot
+Allow: /
+
+
+# ──────────────────────────────────────────────────
+# SEO TOOLS — allow (these drive your visibility)
+# ──────────────────────────────────────────────────
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+
+# ──────────────────────────────────────────────────
+# SCRAPERS & SPAM BOTS — block
+# ──────────────────────────────────────────────────
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+
+# ──────────────────────────────────────────────────
+# SITEMAP DECLARATIONS
+# Declared for every bot. Submit the sitemap URL
+# manually in Google Search Console and Bing
+# Webmaster Tools as well.
+# ──────────────────────────────────────────────────
+Sitemap: https://guardata.in/sitemap.xml
